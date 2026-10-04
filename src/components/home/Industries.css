@@ -1,0 +1,395 @@
+/* ========================================
+   INDUSTRIES
+======================================== */
+
+.industries {
+  width: 100%;
+
+  padding: 70px 0;
+
+  background:
+    linear-gradient(
+      110deg,
+      #062451 0%,
+      #082d61 50%,
+      #061f48 100%
+    );
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.industries-container {
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 0 45px;
+
+  display: grid;
+
+  grid-template-columns: 30% 70%;
+
+  align-items: center;
+
+  gap: 40px;
+}
+
+
+/* ========================================
+   LEFT CONTENT
+======================================== */
+
+.industries-content {
+  max-width: 350px;
+}
+
+
+.industries-label {
+  margin-bottom: 10px;
+
+  color: #79b8f5;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.2px;
+
+  text-transform: uppercase;
+}
+
+
+.industries-content h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 35px;
+
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  letter-spacing: -1.2px;
+}
+
+
+.industries-content h2 span {
+  display: block;
+
+  color: #2d91f4;
+}
+
+
+.industries-content p {
+  margin: 16px 0 23px;
+
+  color: #b8cbe1;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   IMAGE GALLERY
+======================================== */
+
+.industries-gallery {
+  display: flex;
+
+  width: 100%;
+
+  height: 320px;
+
+  gap: 5px;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   IMAGE CARD
+======================================== */
+
+.industry-card {
+  position: relative;
+
+  flex: 1;
+
+  min-width: 0;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition:
+    flex 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.industry-card img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.55s ease;
+}
+
+
+/* ========================================
+   DARK OVERLAY
+======================================== */
+
+.industry-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(3, 25, 55, 0.05) 20%,
+      rgba(3, 24, 54, 0.78) 100%
+    );
+
+  transition:
+    background 0.4s ease;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.industry-title {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 75px;
+
+  width: max-content;
+
+  max-width: 90%;
+
+  transform:
+    translateX(-50%)
+    rotate(-90deg);
+
+  transform-origin: center;
+
+  color: #ffffff;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.25px;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.45s ease,
+    left 0.45s ease,
+    bottom 0.45s ease;
+}
+
+
+/* ========================================
+   HOVER — EXPAND IMAGE
+======================================== */
+
+.industry-card:hover {
+  flex: 3.8;
+}
+
+
+.industry-card:hover img {
+  transform: scale(1.04);
+}
+
+
+.industry-card:hover .industry-overlay {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(3, 25, 55, 0.05) 20%,
+      rgba(3, 24, 54, 0.72) 100%
+    );
+}
+
+
+.industry-card:hover .industry-title {
+  left: 20px;
+
+  bottom: 18px;
+
+  transform: translateX(0) rotate(0deg);
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   DESKTOP REFINEMENT
+======================================== */
+
+@media (min-width: 1200px) {
+
+  .industries-gallery {
+    height: 340px;
+
+    gap: 6px;
+  }
+
+  .industry-card:hover {
+    flex: 4.2;
+  }
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+  .industries-container {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding: 0 35px;
+  }
+
+  .industries-content {
+    max-width: 600px;
+  }
+
+  .industries-gallery {
+    height: 300px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+  .industries {
+    padding: 55px 0;
+  }
+
+  .industries-container {
+    padding: 0 20px;
+  }
+
+
+  .industries-content h2 {
+    font-size: 30px;
+  }
+
+
+  .industries-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    height: auto;
+
+    gap: 8px;
+  }
+
+
+  .industry-card {
+    height: 210px;
+
+    flex: none;
+  }
+
+
+  .industry-card:hover {
+    flex: none;
+  }
+
+
+  .industry-card img {
+    transition: transform 0.4s ease;
+  }
+
+
+  .industry-card:hover img {
+    transform: scale(1.06);
+  }
+
+
+  .industry-title {
+    left: 50%;
+
+    bottom: 15px;
+
+    transform:
+      translateX(-50%)
+      rotate(0deg);
+
+    font-size: 11px;
+
+    white-space: normal;
+
+    width: 85%;
+  }
+
+
+  .industry-card:hover .industry-title {
+    left: 50%;
+
+    bottom: 15px;
+
+    transform:
+      translateX(-50%)
+      rotate(0deg);
+
+    font-size: 12px;
+  }
+
+}

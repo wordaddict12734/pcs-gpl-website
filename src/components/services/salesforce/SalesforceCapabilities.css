@@ -1,0 +1,606 @@
+/* =========================================
+   SALESFORCE CAPABILITIES
+========================================= */
+
+.salesforce-capabilities {
+  position: relative;
+  padding: 88px 0 94px;
+  background: #f7fbff;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   SUBTLE BACKGROUND GLOW
+========================================= */
+
+.salesforce-capabilities::before {
+  content: "";
+  position: absolute;
+  top: -180px;
+  left: -180px;
+
+  width: 420px;
+  height: 420px;
+
+  background: rgba(8, 120, 229, 0.035);
+
+  border-radius: 50%;
+
+  filter: blur(30px);
+}
+
+.salesforce-capabilities::after {
+  content: "";
+  position: absolute;
+  bottom: -200px;
+  right: -150px;
+
+  width: 400px;
+  height: 400px;
+
+  background: rgba(8, 120, 229, 0.035);
+
+  border-radius: 50%;
+
+  filter: blur(35px);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.salesforce-capabilities-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, 90%);
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 0.82fr 1.55fr;
+
+  align-items: center;
+
+  gap: 70px;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.salesforce-capabilities-content {
+  max-width: 390px;
+}
+
+
+/* =========================================
+   SECTION LABEL
+========================================= */
+
+.salesforce-section-label {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 2.3px;
+
+  color: #0878e5;
+}
+
+.salesforce-section-label span {
+  width: 34px;
+  height: 1px;
+
+  background: #0878e5;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.salesforce-capabilities-content h2 {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(38px, 3.2vw, 48px);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+
+  color: #082f5f;
+}
+
+.salesforce-capabilities-content h2 span {
+  color: #082f5f;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.salesforce-capabilities-content > p {
+  max-width: 370px;
+
+  margin: 22px 0 30px;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+
+  color: #557293;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.salesforce-capabilities-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  min-height: 48px;
+
+  padding: 0 22px;
+
+  background: #0878e5;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  border-radius: 4px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.salesforce-capabilities-btn svg {
+  font-size: 16px;
+
+  transition: transform 0.3s ease;
+}
+
+.salesforce-capabilities-btn:hover {
+  background: #0669ca;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(8, 120, 229, 0.18);
+}
+
+.salesforce-capabilities-btn:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   CAPABILITY GRID
+========================================= */
+
+.salesforce-capabilities-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+}
+
+
+/* =========================================
+   CAPABILITY CARD
+========================================= */
+
+.salesforce-capability-card {
+  position: relative;
+
+  min-height: 165px;
+
+  padding: 22px 19px 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e8f0f8;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 5px 20px rgba(18, 69, 110, 0.045);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.salesforce-capability-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(8, 120, 229, 0.25);
+
+  box-shadow:
+    0 12px 30px rgba(18, 69, 110, 0.10);
+}
+
+
+/* =========================================
+   CARD ICON
+========================================= */
+
+.salesforce-capability-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 16px;
+
+  color: #0878e5;
+
+  font-size: 22px;
+
+  background: rgba(8, 120, 229, 0.06);
+
+  border-radius: 7px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.salesforce-capability-card:hover
+.salesforce-capability-icon {
+  background: #0878e5;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.salesforce-capability-card h3 {
+  margin: 0 0 8px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.35;
+
+  font-weight: 800;
+
+  color: #082f5f;
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.salesforce-capability-card p {
+  margin: 0;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  color: #69809a;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .salesforce-capabilities {
+    padding: 78px 0 84px;
+  }
+
+  .salesforce-capabilities-container {
+    grid-template-columns: 1fr;
+
+    gap: 48px;
+  }
+
+  .salesforce-capabilities-content {
+    max-width: 650px;
+  }
+
+  .salesforce-capabilities-content > p {
+    max-width: 560px;
+  }
+
+  .salesforce-capabilities-grid {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+  }
+
+  .salesforce-capability-card {
+    min-height: 175px;
+
+    padding: 21px 17px;
+  }
+
+  .salesforce-capability-card h3 {
+    font-size: 13px;
+  }
+
+  .salesforce-capability-card p {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 680px) {
+
+  .salesforce-capabilities {
+    padding: 68px 0 74px;
+  }
+
+  .salesforce-capabilities-container {
+    width: 88%;
+
+    gap: 38px;
+  }
+
+
+  /* -----------------------------
+     LABEL
+  ----------------------------- */
+
+  .salesforce-section-label {
+    margin-bottom: 17px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+  }
+
+  .salesforce-section-label span {
+    width: 27px;
+  }
+
+
+  /* -----------------------------
+     HEADING
+  ----------------------------- */
+
+  .salesforce-capabilities-content h2 {
+    font-size: 34px;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.9px;
+  }
+
+
+  /* -----------------------------
+     DESCRIPTION
+  ----------------------------- */
+
+  .salesforce-capabilities-content > p {
+    max-width: 100%;
+
+    margin: 18px 0 27px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  /* -----------------------------
+     BUTTON
+  ----------------------------- */
+
+  .salesforce-capabilities-btn {
+    min-height: 45px;
+
+    padding: 0 19px;
+
+    font-size: 11px;
+  }
+
+
+  /* -----------------------------
+     GRID
+  ----------------------------- */
+
+  .salesforce-capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 13px;
+  }
+
+
+  /* -----------------------------
+     CARD
+  ----------------------------- */
+
+  .salesforce-capability-card {
+    min-height: 175px;
+
+    padding: 18px 15px;
+  }
+
+
+  /* -----------------------------
+     ICON
+  ----------------------------- */
+
+  .salesforce-capability-icon {
+    width: 37px;
+    height: 37px;
+
+    margin-bottom: 13px;
+
+    font-size: 19px;
+  }
+
+
+  /* -----------------------------
+     TITLE
+  ----------------------------- */
+
+  .salesforce-capability-card h3 {
+    margin-bottom: 7px;
+
+    font-size: 12px;
+  }
+
+
+  /* -----------------------------
+     DESCRIPTION
+  ----------------------------- */
+
+  .salesforce-capability-card p {
+    font-size: 10.5px;
+
+    line-height: 1.55;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 430px) {
+
+  .salesforce-capabilities {
+    padding: 60px 0 68px;
+  }
+
+  .salesforce-capabilities-container {
+    width: 89%;
+
+    gap: 34px;
+  }
+
+
+  /* -----------------------------
+     HEADING
+  ----------------------------- */
+
+  .salesforce-capabilities-content h2 {
+    font-size: 32px;
+
+    letter-spacing: -0.7px;
+  }
+
+
+  /* -----------------------------
+     DESCRIPTION
+  ----------------------------- */
+
+  .salesforce-capabilities-content > p {
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+
+
+  /* -----------------------------
+     GRID
+  ----------------------------- */
+
+  .salesforce-capabilities-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+
+  /* -----------------------------
+     CARD
+  ----------------------------- */
+
+  .salesforce-capability-card {
+    min-height: auto;
+
+    padding: 20px 18px;
+  }
+
+
+  /* -----------------------------
+     ICON
+  ----------------------------- */
+
+  .salesforce-capability-icon {
+    width: 40px;
+    height: 40px;
+
+    margin-bottom: 14px;
+
+    font-size: 20px;
+  }
+
+
+  /* -----------------------------
+     TITLE
+  ----------------------------- */
+
+  .salesforce-capability-card h3 {
+    font-size: 13px;
+  }
+
+
+  /* -----------------------------
+     DESCRIPTION
+  ----------------------------- */
+
+  .salesforce-capability-card p {
+    max-width: 330px;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+  }
+}

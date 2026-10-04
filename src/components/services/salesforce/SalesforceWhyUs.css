@@ -1,0 +1,573 @@
+/* =========================================
+   SALESFORCE - WHY US
+========================================= */
+
+.salesforce-why-us {
+  position: relative;
+
+  padding: 95px 0;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.salesforce-why-us-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, 90%);
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 75px;
+}
+
+
+/* =========================================
+   LEFT VISUAL
+========================================= */
+
+.salesforce-why-us-visual {
+  position: relative;
+
+  min-height: 455px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.salesforce-why-us-image-wrap {
+  position: relative;
+
+  width: 100%;
+  max-width: 525px;
+
+  padding: 0 0 24px 22px;
+}
+
+
+/* =========================================
+   BLUE ACCENT SHAPE
+========================================= */
+
+.salesforce-why-us-accent {
+  position: absolute;
+
+  top: 30px;
+  left: 0;
+
+  width: 85%;
+  height: 82%;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(8, 120, 229, 0.18),
+      rgba(8, 120, 229, 0.035)
+    );
+
+  transform: translate(-10px, 12px);
+
+  z-index: 0;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.salesforce-why-us-image {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  height: 385px;
+
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 20px 45px rgba(14, 54, 92, 0.13);
+}
+
+
+/* =========================================
+   BADGE
+========================================= */
+
+.salesforce-why-us-badge {
+  position: absolute;
+
+  z-index: 4;
+
+  left: 55px;
+  bottom: 0;
+
+  min-width: 210px;
+
+  padding: 14px 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5edf5;
+
+  border-radius: 7px;
+
+  box-shadow:
+    0 10px 30px rgba(16, 58, 95, 0.13);
+}
+
+
+.salesforce-why-us-badge-icon {
+  width: 37px;
+  height: 37px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0878e5;
+
+  color: #ffffff;
+
+  font-size: 18px;
+}
+
+
+.salesforce-why-us-badge div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.salesforce-why-us-badge strong {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  color: #082f5f;
+}
+
+
+.salesforce-why-us-badge span {
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 11px;
+
+  color: #7890a8;
+}
+
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.salesforce-why-us-content {
+  max-width: 540px;
+}
+
+
+.salesforce-why-us-label {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 17px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2.2px;
+
+  color: #0878e5;
+}
+
+
+.salesforce-why-us-label span {
+  width: 30px;
+  height: 1px;
+
+  background: #0878e5;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.salesforce-why-us-content h2 {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(36px, 3vw, 46px);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  letter-spacing: -1.4px;
+
+  color: #082f5f;
+}
+
+
+.salesforce-why-us-content h2 span {
+  color: #0878e5;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.salesforce-why-us-intro {
+  max-width: 500px;
+
+  margin: 20px 0 32px;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+
+  color: #5c7591;
+}
+
+
+/* =========================================
+   REASONS GRID
+========================================= */
+
+.salesforce-reasons {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  column-gap: 28px;
+
+  row-gap: 28px;
+}
+
+
+/* =========================================
+   REASON
+========================================= */
+
+.salesforce-reason {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+
+.salesforce-reason-icon {
+  width: 36px;
+  height: 36px;
+
+  min-width: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0878e5;
+
+  color: #ffffff;
+
+  font-size: 16px;
+}
+
+
+/* =========================================
+   REASON CONTENT
+========================================= */
+
+.salesforce-reason-content h3 {
+  margin: 1px 0 6px;
+
+  font-family: "Manrope", sans-serif;
+
+  /* INCREASED */
+  font-size: 14px;
+
+  line-height: 1.4;
+
+  font-weight: 800;
+
+  color: #082f5f;
+}
+
+
+.salesforce-reason-content p {
+  margin: 0;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  /* INCREASED */
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  color: #7890a8;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.salesforce-why-us-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 46px;
+
+  padding: 0 21px;
+
+  margin-top: 32px;
+
+  background: #0878e5;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  border-radius: 4px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.salesforce-why-us-btn svg {
+  font-size: 15px;
+
+  transition: transform 0.3s ease;
+}
+
+
+.salesforce-why-us-btn:hover {
+  background: #0669ca;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(8, 120, 229, 0.18);
+}
+
+
+.salesforce-why-us-btn:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .salesforce-why-us-container {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .salesforce-why-us-visual {
+    min-height: auto;
+  }
+
+  .salesforce-why-us-image-wrap {
+    max-width: 650px;
+  }
+
+  .salesforce-why-us-content {
+    max-width: 700px;
+  }
+
+  .salesforce-why-us-intro {
+    max-width: 650px;
+  }
+
+  .salesforce-reason-content h3 {
+    font-size: 14px;
+  }
+
+  .salesforce-reason-content p {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 680px) {
+
+  .salesforce-why-us {
+    padding: 70px 0;
+  }
+
+  .salesforce-why-us-container {
+    width: 88%;
+
+    gap: 45px;
+  }
+
+  .salesforce-why-us-image-wrap {
+    padding-left: 10px;
+    padding-bottom: 22px;
+  }
+
+  .salesforce-why-us-image {
+    height: 300px;
+
+    border-radius: 9px;
+  }
+
+  .salesforce-why-us-accent {
+    border-radius: 15px;
+
+    transform: translate(-5px, 8px);
+  }
+
+  .salesforce-why-us-badge {
+    left: 25px;
+
+    min-width: 190px;
+
+    padding: 11px 14px;
+  }
+
+  .salesforce-why-us-badge strong {
+    font-size: 11px;
+  }
+
+  .salesforce-why-us-badge span {
+    font-size: 10px;
+  }
+
+  .salesforce-why-us-content h2 {
+    font-size: 32px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .salesforce-why-us-intro {
+    font-size: 13px;
+  }
+
+  .salesforce-reasons {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .salesforce-reason-icon {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+
+    font-size: 15px;
+  }
+
+  .salesforce-reason-content h3 {
+    font-size: 13px;
+
+    margin-bottom: 5px;
+  }
+
+  .salesforce-reason-content p {
+    max-width: 390px;
+
+    /* INCREASED */
+    font-size: 12px;
+
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 430px) {
+
+  .salesforce-why-us-image {
+    height: 250px;
+  }
+
+  .salesforce-why-us-badge {
+    left: 18px;
+  }
+
+  .salesforce-reason-icon {
+    width: 32px;
+    height: 32px;
+
+    min-width: 32px;
+  }
+
+  .salesforce-reason-content h3 {
+    font-size: 12px;
+  }
+
+  .salesforce-reason-content p {
+    font-size: 11px;
+    line-height: 1.55;
+  }
+}

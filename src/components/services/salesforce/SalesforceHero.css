@@ -1,0 +1,796 @@
+/* =========================================
+   SALESFORCE HERO
+========================================= */
+
+.salesforce-hero {
+  position: relative;
+  min-height: 650px;
+  overflow: hidden;
+  background: #082f5f;
+  color: #ffffff;
+  isolation: isolate;
+}
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.salesforce-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+
+  background:
+    linear-gradient(
+      90deg,
+      #062b58 0%,
+      #07376f 48%,
+      #075fa8 100%
+    );
+}
+
+.salesforce-hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      115deg,
+      transparent 0%,
+      transparent 48%,
+      rgba(8, 120, 229, 0.22) 48%,
+      rgba(8, 120, 229, 0.22) 70%,
+      transparent 70%
+    );
+}
+
+/* subtle technical grid */
+
+.salesforce-hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  opacity: 0.12;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.15) 1px,
+      transparent 1px
+    );
+
+  background-size: 55px 55px;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 55%,
+    transparent
+  );
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.salesforce-hero-container {
+  width: min(1180px, 90%);
+  min-height: 650px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.salesforce-hero-content {
+  max-width: 610px;
+  padding: 80px 0;
+}
+
+.salesforce-hero-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 20px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+
+  color: #59baff;
+}
+
+.salesforce-hero-label span {
+  width: 34px;
+  height: 1px;
+  background: #59baff;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.salesforce-hero-content h1 {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(42px, 4vw, 62px);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -1.8px;
+
+  color: #ffffff;
+}
+
+.salesforce-hero-content h1 span {
+  color: #35a8ff;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.salesforce-hero-description {
+  max-width: 535px;
+
+  margin: 25px 0 32px;
+
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* =========================================
+   HIGHLIGHTS
+========================================= */
+
+.salesforce-hero-highlights {
+  display: flex;
+  align-items: center;
+  gap: 0;
+
+  margin-bottom: 34px;
+}
+
+.salesforce-highlight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding-right: 22px;
+  margin-right: 22px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.salesforce-highlight:last-child {
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.salesforce-highlight-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(61, 177, 255, 0.5);
+  border-radius: 6px;
+
+  color: #48b4ff;
+  font-size: 17px;
+}
+
+.salesforce-highlight div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.salesforce-highlight strong {
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.salesforce-highlight span {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.salesforce-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.salesforce-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 48px;
+  padding: 0 22px;
+
+  background: #0878e5;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  border-radius: 4px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: 0.3s ease;
+}
+
+.salesforce-primary-btn svg {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.salesforce-primary-btn:hover {
+  background: #1689f5;
+  transform: translateY(-2px);
+}
+
+.salesforce-primary-btn:hover svg {
+  transform: translateX(4px);
+}
+
+.salesforce-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.salesforce-secondary-btn:hover {
+  color: #5dbbff;
+}
+
+.salesforce-play-icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+}
+
+.salesforce-play-icon svg {
+  font-size: 12px;
+}
+
+/* =========================================
+   RIGHT IMAGE
+========================================= */
+
+.salesforce-hero-visual {
+  position: relative;
+
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.salesforce-hero-glow {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  background: rgba(8, 120, 229, 0.18);
+
+  border-radius: 50%;
+
+  filter: blur(70px);
+
+  z-index: 0;
+}
+
+.salesforce-hero-image {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+
+  object-fit: contain;
+  display: block;
+
+  filter: drop-shadow(
+    0 25px 45px rgba(0, 20, 50, 0.3)
+  );
+
+  transition: transform 0.4s ease;
+}
+
+.salesforce-hero-image:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .salesforce-hero {
+    min-height: 600px;
+  }
+
+  .salesforce-hero-container {
+    width: 92%;
+    min-height: 600px;
+
+    grid-template-columns: 1fr 0.9fr;
+
+    gap: 25px;
+  }
+
+  .salesforce-hero-content {
+    padding: 65px 0;
+  }
+
+  .salesforce-hero-content h1 {
+    font-size: clamp(40px, 4.5vw, 54px);
+  }
+
+  .salesforce-hero-description {
+    max-width: 500px;
+    font-size: 15px;
+  }
+
+  .salesforce-hero-image {
+    max-width: 520px;
+  }
+
+  .salesforce-hero-visual {
+    min-height: 450px;
+  }
+
+  .salesforce-hero-glow {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+
+/* =========================================
+   TABLET / SMALL LAPTOP
+========================================= */
+
+@media (max-width: 850px) {
+
+  .salesforce-hero {
+    min-height: auto;
+  }
+
+  .salesforce-hero-container {
+    width: 88%;
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    padding-top: 55px;
+    padding-bottom: 45px;
+  }
+
+  /* -----------------------------
+     CONTENT
+  ----------------------------- */
+
+  .salesforce-hero-content {
+    max-width: 680px;
+    padding: 20px 0 0;
+  }
+
+  .salesforce-hero-label {
+    font-size: 11px;
+    letter-spacing: 2.3px;
+    margin-bottom: 16px;
+  }
+
+  .salesforce-hero-content h1 {
+    font-size: clamp(40px, 6vw, 52px);
+    letter-spacing: -1.4px;
+  }
+
+  .salesforce-hero-description {
+    max-width: 600px;
+
+    margin: 20px 0 27px;
+
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* -----------------------------
+     HIGHLIGHTS
+  ----------------------------- */
+
+  .salesforce-hero-highlights {
+    margin-bottom: 28px;
+  }
+
+  .salesforce-highlight {
+    padding-right: 18px;
+    margin-right: 18px;
+  }
+
+  .salesforce-highlight strong {
+    font-size: 10px;
+  }
+
+  .salesforce-highlight span {
+    font-size: 10px;
+  }
+
+  /* -----------------------------
+     IMAGE
+  ----------------------------- */
+
+  .salesforce-hero-visual {
+    min-height: 360px;
+
+    margin-top: 5px;
+  }
+
+  .salesforce-hero-image {
+    width: 80%;
+    max-width: 520px;
+  }
+
+  .salesforce-hero-glow {
+    width: 320px;
+    height: 320px;
+
+    filter: blur(60px);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .salesforce-hero-container {
+    width: 88%;
+
+    padding-top: 48px;
+    padding-bottom: 35px;
+
+    gap: 0;
+  }
+
+  /* -----------------------------
+     CONTENT
+  ----------------------------- */
+
+  .salesforce-hero-content {
+    padding: 0;
+  }
+
+  .salesforce-hero-label {
+    gap: 8px;
+
+    margin-bottom: 15px;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .salesforce-hero-label span {
+    width: 25px;
+  }
+
+  .salesforce-hero-content h1 {
+    font-size: clamp(34px, 10vw, 45px);
+
+    line-height: 1.08;
+
+    letter-spacing: -1px;
+  }
+
+  .salesforce-hero-description {
+    max-width: 100%;
+
+    margin: 18px 0 25px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  /* -----------------------------
+     HIGHLIGHTS
+  ----------------------------- */
+
+  .salesforce-hero-highlights {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 0;
+
+    margin-bottom: 27px;
+  }
+
+  .salesforce-highlight {
+    min-width: 0;
+
+    gap: 7px;
+
+    padding-right: 10px;
+
+    margin-right: 10px;
+  }
+
+  .salesforce-highlight-icon {
+    width: 30px;
+    height: 30px;
+
+    min-width: 30px;
+
+    font-size: 14px;
+  }
+
+  .salesforce-highlight strong {
+    font-size: 9px;
+
+    line-height: 1.3;
+  }
+
+  .salesforce-highlight span {
+    font-size: 8.5px;
+
+    line-height: 1.3;
+  }
+
+
+  /* -----------------------------
+     BUTTONS
+  ----------------------------- */
+
+  .salesforce-hero-actions {
+    gap: 18px;
+
+    flex-wrap: wrap;
+  }
+
+  .salesforce-primary-btn {
+    min-height: 45px;
+
+    padding: 0 18px;
+
+    font-size: 11px;
+  }
+
+  .salesforce-primary-btn svg {
+    font-size: 14px;
+  }
+
+  .salesforce-secondary-btn {
+    gap: 8px;
+
+    font-size: 10px;
+  }
+
+  .salesforce-play-icon {
+    width: 27px;
+    height: 27px;
+  }
+
+  .salesforce-play-icon svg {
+    font-size: 10px;
+  }
+
+
+  /* -----------------------------
+     IMAGE
+  ----------------------------- */
+
+  .salesforce-hero-visual {
+    min-height: 290px;
+
+    margin-top: 15px;
+  }
+
+  .salesforce-hero-image {
+    width: 100%;
+
+    max-width: 430px;
+  }
+
+  .salesforce-hero-glow {
+    width: 270px;
+    height: 270px;
+
+    filter: blur(55px);
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 430px) {
+
+  .salesforce-hero-container {
+    width: 90%;
+
+    padding-top: 42px;
+    padding-bottom: 30px;
+  }
+
+
+  /* -----------------------------
+     HEADING
+  ----------------------------- */
+
+  .salesforce-hero-content h1 {
+    font-size: 34px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .salesforce-hero-description {
+    font-size: 12.5px;
+
+    line-height: 1.65;
+  }
+
+
+  /* -----------------------------
+     HIGHLIGHTS
+  ----------------------------- */
+
+  .salesforce-hero-highlights {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 27px;
+  }
+
+  .salesforce-highlight {
+    width: fit-content;
+
+    padding-right: 0;
+    margin-right: 0;
+
+    border-right: none;
+  }
+
+  .salesforce-highlight-icon {
+    width: 31px;
+    height: 31px;
+  }
+
+  .salesforce-highlight strong {
+    font-size: 10px;
+  }
+
+  .salesforce-highlight span {
+    font-size: 9px;
+  }
+
+
+  /* -----------------------------
+     BUTTONS
+  ----------------------------- */
+
+  .salesforce-hero-actions {
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .salesforce-primary-btn {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+
+  /* -----------------------------
+     IMAGE
+  ----------------------------- */
+
+  .salesforce-hero-visual {
+    min-height: 245px;
+
+    margin-top: 10px;
+  }
+
+  .salesforce-hero-image {
+    width: 105%;
+    max-width: 400px;
+  }
+
+  .salesforce-hero-glow {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+  .salesforce-hero-content h1 {
+    font-size: 31px;
+  }
+
+  .salesforce-hero-description {
+    font-size: 12px;
+  }
+
+  .salesforce-hero-visual {
+    min-height: 220px;
+  }
+
+  .salesforce-hero-image {
+    width: 108%;
+  }
+}

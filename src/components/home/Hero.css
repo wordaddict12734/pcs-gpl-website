@@ -1,0 +1,582 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 540px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  font-family: "Manrope", sans-serif;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.hero-container {
+  position: relative;
+
+  width: 100%;
+  max-width: 1600px;
+  min-height: 540px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* ========================================
+   LEFT CONTENT
+======================================== */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 56%;
+
+  padding-left: clamp(30px, 5vw, 80px);
+  padding-right: 45px;
+
+  margin-top: -5px;
+}
+
+
+/* ========================================
+   EYEBROW
+======================================== */
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 18px;
+
+  color: #35638d;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+
+.hero-eyebrow i {
+  display: block;
+
+  width: 28px;
+  height: 1px;
+
+  background: #7f94aa;
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.hero-content h1 {
+  margin: 0;
+
+  color: #071b42;
+
+  font-size: clamp(43px, 4.1vw, 64px);
+
+  line-height: 1.04;
+
+  font-weight: 800;
+
+  letter-spacing: -2.8px;
+}
+
+.hero-content h1 span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #0969dc;
+
+  font-weight: 800;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.hero-content p {
+  max-width: 590px;
+
+  margin: 25px 0 30px;
+
+  color: #50627a;
+
+  font-size: 15.5px;
+
+  line-height: 1.75;
+
+  font-weight: 500;
+
+  letter-spacing: -0.1px;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+.hero-btn {
+  min-height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 25px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: -0.1px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* ========================================
+   PRIMARY BUTTON
+======================================== */
+
+.hero-btn-primary {
+  gap: 13px;
+
+  color: #ffffff;
+
+  background: #0969dc;
+
+  box-shadow:
+    0 8px 20px rgba(9, 105, 220, 0.18);
+}
+
+.hero-btn-primary span {
+  font-size: 19px;
+
+  line-height: 1;
+
+  transition: transform 0.25s ease;
+}
+
+.hero-btn-primary:hover {
+  background: #075dc6;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(9, 105, 220, 0.25);
+}
+
+.hero-btn-primary:hover span {
+  transform: translateX(4px);
+}
+
+
+/* ========================================
+   SECONDARY BUTTON
+======================================== */
+
+.hero-btn-secondary {
+  color: #173f69;
+
+  background: #ffffff;
+
+  border: 1px solid #c8d5e3;
+}
+
+.hero-btn-secondary:hover {
+  color: #0969dc;
+
+  background: #f6f9fd;
+
+  border-color: #0969dc;
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   RIGHT IMAGE
+======================================== */
+
+.hero-visual {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 47%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   IMAGE WRAPPER
+======================================== */
+
+.hero-image-wrapper {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.hero-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition: transform 0.8s ease;
+}
+
+
+/* Very subtle image movement */
+
+.hero:hover .hero-image {
+  transform: scale(1.015);
+}
+
+
+/* ========================================
+   IMAGE EDGE FADE
+======================================== */
+
+.hero-image-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 1;
+
+  top: 0;
+  left: 0;
+
+  width: 28%;
+  height: 100%;
+
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.75) 18%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1100px) {
+
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero-container {
+    min-height: 500px;
+  }
+
+  .hero-content {
+    width: 58%;
+
+    padding-left: 35px;
+    padding-right: 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 46px;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-content p {
+    max-width: 500px;
+
+    font-size: 14.5px;
+
+    line-height: 1.7;
+  }
+
+  .hero-visual {
+    width: 45%;
+  }
+
+  .hero-image-wrapper::before {
+    width: 35%;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-container {
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 48px;
+  }
+
+
+  /* ====================================
+     CONTENT
+  ==================================== */
+
+  .hero-content {
+    width: 100%;
+
+    padding:
+      0 25px 38px;
+
+    margin-top: 0;
+  }
+
+
+  /* ====================================
+     EYEBROW
+  ==================================== */
+
+  .hero-eyebrow {
+    gap: 9px;
+
+    margin-bottom: 15px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .hero-eyebrow i {
+    width: 20px;
+  }
+
+
+  /* ====================================
+     HEADING
+  ==================================== */
+
+  .hero-content h1 {
+    font-size: clamp(36px, 9vw, 48px);
+
+    line-height: 1.06;
+
+    letter-spacing: -1.8px;
+  }
+
+  .hero-content h1 span {
+    margin-top: 3px;
+  }
+
+
+  /* ====================================
+     DESCRIPTION
+  ==================================== */
+
+  .hero-content p {
+    max-width: 100%;
+
+    margin-top: 18px;
+    margin-bottom: 24px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  /* ====================================
+     BUTTONS
+  ==================================== */
+
+  .hero-buttons {
+    flex-wrap: wrap;
+
+    gap: 10px;
+  }
+
+  .hero-btn {
+    min-height: 46px;
+
+    padding: 0 19px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+  }
+
+  .hero-btn-primary span {
+    font-size: 18px;
+  }
+
+
+  /* ====================================
+     IMAGE
+  ==================================== */
+
+  .hero-visual {
+    position: relative;
+
+    width: 100%;
+    height: 280px;
+
+    top: auto;
+    right: auto;
+  }
+
+  .hero-image-wrapper {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+  }
+
+
+  /* Remove side fade on mobile */
+
+  .hero-image-wrapper::before {
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 25%;
+
+    background: linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
+
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 480px) {
+
+  .hero-container {
+    padding-top: 40px;
+  }
+
+  .hero-content {
+    padding:
+      0 20px 32px;
+  }
+
+
+  /* Heading */
+
+  .hero-content h1 {
+    font-size: 34px;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  /* Description */
+
+  .hero-content p {
+    font-size: 13.5px;
+
+    line-height: 1.65;
+  }
+
+
+  /* Buttons */
+
+  .hero-buttons {
+    width: 100%;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    flex: 1;
+
+    padding: 0 13px;
+
+    min-width: 0;
+  }
+
+
+  /* Image */
+
+  .hero-visual {
+    height: 235px;
+  }
+}

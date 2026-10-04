@@ -1,0 +1,527 @@
+
+/*CONTACT / LET'S CONNECT*/
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
+
+
+.contact {
+  width: 100%;
+  padding: 85px 35px 75px;
+
+  background: #f7faff;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  box-sizing: border-box;
+}
+
+
+.contact-inner {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.contact-header {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+.contact-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-bottom: 13px;
+
+  color: #4b91d8;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+.contact-label span {
+  width: 30px;
+  height: 1px;
+
+  background: #4b91d8;
+}
+
+
+.contact-header h2 {
+  margin: 0;
+
+  color: #123d70;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 42px;
+  line-height: 1.12;
+
+  font-weight: 800;
+
+  letter-spacing: -1.4px;
+}
+
+
+.contact-header h2 span {
+  display: block;
+
+  color: #0878e5;
+}
+
+
+.contact-header p {
+  max-width: 650px;
+
+  margin: 17px auto 0;
+
+  color: #71869b;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   CONTACT CARDS
+======================================== */
+
+.contact-cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 15px;
+
+  margin-top: 45px;
+}
+
+
+.contact-card {
+  position: relative;
+
+  min-height: 92px;
+
+  padding: 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dfe9f3;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.contact-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #b9d8f2;
+
+  box-shadow:
+    0 12px 28px rgba(25, 77, 125, 0.08);
+}
+
+
+/* ========================================
+   CARD ICON
+======================================== */
+
+.contact-card-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(8, 120, 229, 0.2);
+  border-radius: 5px;
+
+  background: #f1f7fd;
+
+  color: #0878e5;
+
+  font-size: 16px;
+}
+
+
+/* ========================================
+   CARD CONTENT
+======================================== */
+
+.contact-card-content {
+  min-width: 0;
+}
+
+
+.contact-card-content span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #8296aa;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+.contact-card-content strong {
+  display: block;
+
+  color: #24486c;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  word-break: break-word;
+}
+
+
+/* ========================================
+   CARD ARROW
+======================================== */
+
+.contact-card-arrow {
+  margin-left: auto;
+
+  flex-shrink: 0;
+
+  color: #0878e5;
+
+  font-size: 14px;
+
+  transition: transform 0.25s ease;
+}
+
+
+.contact-card:hover .contact-card-arrow {
+  transform: translateX(4px);
+}
+
+
+/* ========================================
+   STATIC LOCATION CARD
+======================================== */
+
+.contact-card-static {
+  cursor: default;
+}
+
+
+.contact-card-static:hover {
+  transform: none;
+
+  border-color: #dfe9f3;
+
+  box-shadow: none;
+}
+
+
+/* ========================================
+   CTA
+======================================== */
+
+.contact-cta {
+  position: relative;
+
+  overflow: hidden;
+
+  margin-top: 18px;
+
+  padding: 24px 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  border-radius: 6px;
+
+  background:
+    linear-gradient(
+      105deg,
+      #062d5c 0%,
+      #07447e 55%,
+      #0878e5 100%
+    );
+
+  box-shadow:
+    0 12px 28px rgba(8, 74, 135, 0.14);
+}
+
+
+.contact-cta::after {
+  content: "";
+
+  position: absolute;
+
+  right: -80px;
+  top: -100px;
+
+  width: 260px;
+  height: 260px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 50%;
+}
+
+
+.contact-cta-content {
+  position: relative;
+
+  z-index: 1;
+}
+
+
+.contact-cta-content > span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #83c3fa;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+
+.contact-cta-content h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* ========================================
+   CTA BUTTON
+======================================== */
+
+.contact-cta-button {
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  flex-shrink: 0;
+
+  padding: 11px 17px;
+
+  border-radius: 4px;
+
+  background: #ffffff;
+
+  color: #075ba9;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.contact-cta-button svg {
+  font-size: 14px;
+
+  transition: transform 0.25s ease;
+}
+
+
+.contact-cta-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+.contact-cta-button:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .contact {
+    padding: 70px 25px 60px;
+  }
+
+
+  .contact-header h2 {
+    font-size: 36px;
+  }
+
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+
+    max-width: 650px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .contact-card {
+    min-height: 78px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .contact {
+    padding: 60px 18px 50px;
+  }
+
+
+  .contact-header {
+    text-align: left;
+  }
+
+
+  .contact-label {
+    justify-content: flex-start;
+  }
+
+
+  .contact-header h2 {
+    font-size: 30px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .contact-header p {
+    margin-top: 14px;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+
+  .contact-cards {
+    margin-top: 32px;
+
+    gap: 10px;
+  }
+
+
+  .contact-card {
+    padding: 15px;
+  }
+
+
+  .contact-card-content strong {
+    font-size: 11px;
+  }
+
+
+  .contact-cta {
+    margin-top: 12px;
+
+    padding: 20px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .contact-cta-content h3 {
+    font-size: 18px;
+  }
+
+
+  .contact-cta-button {
+    width: 100%;
+  }
+
+}
+

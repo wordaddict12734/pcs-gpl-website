@@ -1,0 +1,350 @@
+/* =========================================
+   SALESFORCE CTA
+========================================= */
+
+.salesforce-cta {
+  position: relative;
+
+  padding: 68px 0;
+
+  background: #062b58;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.salesforce-cta-bg {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      105deg,
+      #062b58 0%,
+      #07376f 55%,
+      #075fa8 100%
+    );
+
+  z-index: 0;
+}
+
+
+/* angled blue shapes */
+
+.salesforce-cta-bg::before {
+  content: "";
+
+  position: absolute;
+
+  top: -100px;
+  right: 8%;
+
+  width: 240px;
+  height: 420px;
+
+  background: rgba(8, 120, 229, 0.16);
+
+  transform: skewX(-25deg);
+}
+
+
+.salesforce-cta-bg::after {
+  content: "";
+
+  position: absolute;
+
+  top: -100px;
+  right: -3%;
+
+  width: 180px;
+  height: 420px;
+
+  background: rgba(35, 160, 255, 0.12);
+
+  transform: skewX(-25deg);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.salesforce-cta-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1180px, 90%);
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 50px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.salesforce-cta-content {
+  max-width: 680px;
+}
+
+
+.salesforce-cta-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 14px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: #5dbbff;
+}
+
+
+.salesforce-cta-label span {
+  width: 30px;
+
+  height: 1px;
+
+  background: #5dbbff;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.salesforce-cta-content h2 {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(30px, 3vw, 42px);
+
+  line-height: 1.12;
+
+  font-weight: 800;
+
+  letter-spacing: -1.2px;
+
+  color: #ffffff;
+}
+
+
+.salesforce-cta-content h2 span {
+  color: #4bb2ff;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.salesforce-cta-content p {
+  max-width: 620px;
+
+  margin: 16px 0 0;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.68);
+}
+
+
+/* =========================================
+   RIGHT ACTION
+========================================= */
+
+.salesforce-cta-action {
+  min-width: 295px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 17px 18px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+
+  border-radius: 7px;
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.salesforce-cta-icon {
+  width: 43px;
+  height: 43px;
+
+  min-width: 43px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #0878e5;
+
+  color: #ffffff;
+
+  font-size: 19px;
+}
+
+
+/* =========================================
+   ACTION CONTENT
+========================================= */
+
+.salesforce-cta-action-content {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 5px;
+}
+
+
+.salesforce-cta-action-content > span {
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 10px;
+
+  color: rgba(255, 255, 255, 0.58);
+}
+
+
+/* =========================================
+   CTA LINK
+========================================= */
+
+.salesforce-cta-action-content a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  transition: color 0.3s ease;
+}
+
+
+.salesforce-cta-action-content a svg {
+  font-size: 14px;
+
+  transition: transform 0.3s ease;
+}
+
+
+.salesforce-cta-action-content a:hover {
+  color: #55b8ff;
+}
+
+
+.salesforce-cta-action-content a:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+  .salesforce-cta-container {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 30px;
+  }
+
+  .salesforce-cta-action {
+    min-width: 280px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .salesforce-cta {
+    padding: 58px 0;
+  }
+
+  .salesforce-cta-container {
+    width: 88%;
+  }
+
+  .salesforce-cta-content h2 {
+    font-size: 30px;
+
+    letter-spacing: -0.7px;
+  }
+
+  .salesforce-cta-content p {
+    font-size: 12px;
+  }
+
+  .salesforce-cta-action {
+    width: 100%;
+
+    min-width: 0;
+
+    box-sizing: border-box;
+  }
+}
