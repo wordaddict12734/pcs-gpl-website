@@ -43,7 +43,7 @@ const WhyChoose = () => {
         <div className="why-choose-content">
 
           <div className="why-choose-label">
-            WHY CHOOSE PCS GPL
+            WHY CHOOSE PCS Global
             <span></span>
           </div>
 

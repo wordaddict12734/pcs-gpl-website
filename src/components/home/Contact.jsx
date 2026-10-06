@@ -31,7 +31,7 @@ const Contact = () => {
 
           <p>
             Whether you are looking for technology solutions, IT
-            consulting or long-term digital support, PCS GPL is
+            consulting or long-term digital support, PCS Global is
             ready to help turn your business requirements into
             practical solutions.
           </p>

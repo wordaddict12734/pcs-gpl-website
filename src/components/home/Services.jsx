@@ -60,7 +60,7 @@ const Services = () => {
 
             <h2>
               Comprehensive IT Solutions
-              <span>for Your Business</span>
+              <span> for Your Business</span>
             </h2>
 
             <p>

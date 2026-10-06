@@ -53,8 +53,8 @@ const SalesforceWhyUs = () => {
             <div className="salesforce-why-us-accent"></div>
 
             <img
-              src="/images/salesforce/salesforce-team.jpeg"
-              alt="PCS GPL Salesforce team collaboration"
+              src="/images/salesforce/salesforce-team.jpg"
+              alt="PCS Global Salesforce team collaboration"
               className="salesforce-why-us-image"
             />
 
@@ -84,11 +84,11 @@ const SalesforceWhyUs = () => {
 
           <div className="salesforce-why-us-label">
             <span></span>
-            WHY PCS GPL
+            WHY PCS GLOBAL
           </div>
 
           <h2>
-            Why Choose PCS GPL
+            Why Choose PCS Global
             <br />
             <span>for Salesforce?</span>
           </h2>

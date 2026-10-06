@@ -3,15 +3,15 @@ import "./Industries.css";
 const Industries = () => {
   const industries = [
     {
-      image: "/images/banking.jpeg",
+      image: "/images/banking.jpg",
       title: "Banking & Financial Services",
     },
     {
-      image: "/images/healthcare.jpeg",
+      image: "/images/healthcare.jpg",
       title: "Healthcare & Life Sciences",
     },
     {
-      image: "/images/manufacturing.jpeg",
+      image: "/images/manufacturing.jpg",
       title: "Manufacturing & Engineering",
     },
     {
@@ -23,7 +23,7 @@ const Industries = () => {
       title: "Retail & E-commerce",
     },
     {
-      image: "/images/government.jpeg",
+      image: "/images/government.jpg",
       title: "Government & Public Sector",
     },
   ];

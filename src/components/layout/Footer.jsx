@@ -24,27 +24,32 @@ const Footer = () => {
             
             <a href="/" className="footer-logo">
 
-              <div className="footer-logo-mark">
-                <span>PCS</span>
-              </div>
+              {/* Actual PCS logo */}
+              <img
+                src="/images/logo/white-logo.png"
+                alt="PCS"
+                className="footer-logo-image"
+              />
 
+              {/* Divider */}
+              <span className="footer-logo-divider"></span>
+
+              {/* PCS GPL text */}
               <div className="footer-logo-content">
-                <span className="footer-logo-name">GPL</span>
-                <span className="footer-logo-line"></span>
-                <span className="footer-logo-tagline">
-                  TECHNOLOGY & SOLUTIONS
-                </span>
+
+                <div className="footer-logo-name">
+                  <span>PCS</span><strong>GPL</strong>
+                </div>
+
+                <div className="footer-logo-full-name">
+                  PERNATION COMPUTER SOLUTIONS GLOBAL PVT.LTD.
+                </div>
+
               </div>
 
             </a>
 
-
-
-            <p>
-              Delivering innovative technology solutions,
-              professional services and skilled talent to help
-              businesses grow in a digital world.
-            </p>
+            <p>Building technology solutions for a smarter tomorrow.</p>
 
             <a href="/about" className="footer-company-link">
               Know More About Us
@@ -61,10 +66,10 @@ const Footer = () => {
 
             <a href="/">Home</a>
             <a href="#about">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#industries">Industries</a>
-            <a href="#why-us">Why Choose Us</a>
-            <a href="#contact">Contact Us</a>
+            <a href="/#services">Services</a>
+            <a href="/#industries">Industries</a>
+            <a href="/#why-us">Why Choose Us</a>
+            <a href="/#contact">Contact Us</a>
 
           </div>
 
@@ -139,7 +144,7 @@ const Footer = () => {
         <div className="footer-bottom-container">
 
           <p>
-            © {new Date().getFullYear()} PCS GPL.
+            © {new Date().getFullYear()} PCS GLobal.
             All Rights Reserved.
           </p>
 

@@ -29,7 +29,7 @@ const SalesforceCTA = () => {
 
           <p>
             Talk to our team about your Salesforce requirements and
-            discover how PCS GPL can help turn your business needs
+            discover how PCS Global can help turn your business needs
             into practical technology solutions.
           </p>
 

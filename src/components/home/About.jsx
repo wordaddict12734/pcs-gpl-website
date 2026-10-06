@@ -15,14 +15,14 @@ const About = () => {
         {/* IMAGE */}
         <div className="about-image">
           <img
-            src="/images/about-pcs.jpeg"
-            alt="PCS GPL business environment"
+            src="/images/about-pcs1.jpeg"
+            alt="PCS Global business environment"
           />
 
           <div className="about-image-overlay"></div>
 
           <div className="about-image-badge">
-            <span>PCS GPL</span>
+            <span>PCS Global</span>
             <small>Technology & Talent</small>
           </div>
 
@@ -33,7 +33,7 @@ const About = () => {
         <div className="about-content">
 
           <div className="about-label">
-            ABOUT PCS GPL
+            ABOUT PCS Global
             <span></span>
           </div>
 
@@ -43,7 +43,7 @@ const About = () => {
           </h2>
 
           <p className="about-description">
-            PCS GPL is a leading IT solutions and consulting company
+            PCS Global is a leading IT solutions and consulting company
             delivering innovative, scalable and cost-effective technology
             solutions for businesses.
           </p>

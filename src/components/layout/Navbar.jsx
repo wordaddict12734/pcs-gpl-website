@@ -23,7 +23,7 @@ function Navbar() {
 
           <div className="logo-text">
             <div className="logo-name">
-              <span>PCS</span> <strong>GPL</strong>
+              <span>PCS</span><strong>GPL</strong>
             </div>
 
             <div className="logo-full-name">
@@ -72,7 +72,7 @@ function Navbar() {
             </div>
           </div>
 
-          <a href="#industries" className="nav-link">
+          <a href="/#industries" className="nav-link">
             Industries
           </a>
 
@@ -81,7 +81,7 @@ function Navbar() {
           </a>
 
           {/* Mobile Quote Button */}
-          <a href="#contact" className="mobile-quote-btn">
+          <a href="/#contact" className="mobile-quote-btn">
             Contact Us
             <FiArrowRight />
           </a>
