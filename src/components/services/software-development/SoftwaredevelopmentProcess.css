@@ -1,0 +1,795 @@
+/* =========================================================
+   SOFTWARE DEVELOPMENT — PROCESS SECTION
+========================================================= */
+
+.software-process {
+  width: 100%;
+  background: #f8fafc;
+
+  font-family:
+    "Plus Jakarta Sans",
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  overflow: hidden;
+}
+
+.software-process-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 60px;
+
+  display: grid;
+  grid-template-columns: minmax(280px, 0.75fr) minmax(0, 2.25fr);
+
+  align-items: center;
+  gap: 70px;
+}
+
+
+/* =========================================================
+   LEFT — INTRO
+========================================================= */
+
+.software-process-intro {
+  max-width: 430px;
+}
+
+.software-process-tag {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 19px;
+
+  color: #0256ff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.software-process-tag::before {
+  content: "";
+
+  width: 28px;
+  height: 2px;
+
+  margin-right: 10px;
+
+  background: #0256ff;
+}
+
+.software-process-title {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: clamp(2.2rem, 3.5vw, 2.8rem);
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -1.4px;
+}
+
+.software-process-title span {
+  color: #0256ff;
+}
+
+.software-process-description {
+  max-width: 400px;
+
+  margin: 22px 0 30px;
+
+  color: #64748b;
+
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.software-process-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 13px 22px;
+
+  border-radius: 50px;
+
+  background: #0256ff;
+  color: #ffffff;
+
+  font-size: 13.5px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  box-shadow: 0 8px 22px rgba(2, 86, 255, 0.16);
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.software-process-button svg {
+  transition: transform 0.25s ease;
+}
+
+.software-process-button:hover {
+  background: #0045d8;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 28px rgba(2, 86, 255, 0.23);
+}
+
+.software-process-button:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   RIGHT — PROCESS STEPS
+========================================================= */
+
+.software-process-steps {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.software-process-step {
+  position: relative;
+
+  min-height: 320px;
+
+  padding: 32px 22px 35px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.software-process-step:not(:last-child) {
+  border-right: 1px solid #e2e8f0;
+}
+
+.software-process-step:hover {
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   STEP NUMBER — 270° CONCENTRIC RING
+========================================================= */
+
+.software-process-number {
+  position: relative;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+
+/* ---------------------------------------------------------
+   OUTER INCOMPLETE RING
+--------------------------------------------------------- */
+
+.software-process-number::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  border-radius: 50%;
+
+  background: conic-gradient(
+    from -45deg,
+    #0256ff 0deg,
+    #0256ff 270deg,
+    transparent 270deg,
+    transparent 360deg
+  );
+
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 1.5px),
+    #000 calc(100% - 1.5px)
+  );
+
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 1.5px),
+    #000 calc(100% - 1.5px)
+  );
+}
+
+
+/* ---------------------------------------------------------
+   INNER SOLID CIRCLE
+--------------------------------------------------------- */
+
+.software-process-number span {
+  position: relative;
+  z-index: 1;
+
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0256ff;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+
+  box-shadow:
+    0 5px 14px rgba(2, 86, 255, 0.18);
+}
+
+
+/* =========================================================
+   NUMBER HOVER
+========================================================= */
+
+.software-process-number::before {
+  transition: transform 0.3s ease;
+}
+
+.software-process-step:hover .software-process-number::before {
+  transform: rotate(12deg);
+}
+
+.software-process-step:hover .software-process-number span {
+  box-shadow:
+    0 8px 20px rgba(2, 86, 255, 0.25);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.software-process-icon {
+  width: 58px;
+  height: 58px;
+
+  margin: 28px 0 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0256ff;
+
+  background: #edf4ff;
+
+  border: 1px solid #dbeafe;
+
+  border-radius: 12px;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.software-process-step:hover .software-process-icon {
+  background: #0256ff;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   STEP CONTENT
+========================================================= */
+
+.software-process-step-content {
+  max-width: 190px;
+}
+
+.software-process-step-content h3 {
+  margin: 0 0 10px;
+
+  color: #0f172a;
+
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.4;
+
+  letter-spacing: -0.2px;
+}
+
+.software-process-step-content p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 12.8px;
+  font-weight: 400;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   TABLET — 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .software-process-container {
+    padding: 85px 40px;
+
+    gap: 50px;
+
+    grid-template-columns:
+      minmax(260px, 0.8fr)
+      minmax(0, 2.2fr);
+  }
+
+  .software-process-step {
+    min-height: 310px;
+
+    padding: 30px 17px 32px;
+  }
+
+  .software-process-number {
+    width: 48px;
+    height: 48px;
+  }
+
+  .software-process-number span {
+    width: 37px;
+    height: 37px;
+  }
+
+  .software-process-icon {
+    width: 53px;
+    height: 53px;
+
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  .software-process-step-content {
+    max-width: 180px;
+  }
+
+  .software-process-step-content h3 {
+    font-size: 14px;
+  }
+
+  .software-process-step-content p {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP — 991px
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .software-process-container {
+    padding: 75px 40px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .software-process-intro {
+    max-width: 700px;
+  }
+
+  .software-process-title {
+    max-width: 650px;
+  }
+
+  .software-process-description {
+    max-width: 620px;
+  }
+
+  /* 2 COLUMN PROCESS GRID */
+
+  .software-process-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .software-process-step {
+    min-height: 280px;
+
+    padding: 30px 25px;
+  }
+
+  /* Remove right divider from even cards */
+
+  .software-process-step:nth-child(2n) {
+    border-right: none;
+  }
+
+  /* Horizontal dividers */
+
+  .software-process-step:nth-child(n + 3) {
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .software-process-step-content {
+    max-width: 270px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE — 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .software-process-container {
+    padding: 65px 20px 70px;
+
+    gap: 42px;
+  }
+
+
+  /* -------------------------------------------------------
+     LEFT CONTENT
+  ------------------------------------------------------- */
+
+  .software-process-tag {
+    margin-bottom: 15px;
+
+    font-size: 0.74rem;
+    letter-spacing: 1.3px;
+  }
+
+  .software-process-tag::before {
+    width: 22px;
+
+    margin-right: 8px;
+  }
+
+  .software-process-title {
+    font-size: 2rem;
+
+    line-height: 1.18;
+
+    letter-spacing: -0.8px;
+  }
+
+  .software-process-description {
+    margin: 19px 0 27px;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .software-process-button {
+    padding: 13px 20px;
+
+    font-size: 13.5px;
+  }
+
+
+  /* -------------------------------------------------------
+     PROCESS CONTAINER
+  ------------------------------------------------------- */
+
+  .software-process-steps {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE PROCESS ROW
+     
+     01 | ICON | CONTENT
+  ------------------------------------------------------- */
+
+  .software-process-step,
+  .software-process-step:nth-child(2n) {
+
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 25px 22px;
+
+    display: grid;
+
+    grid-template-columns: 46px 52px minmax(0, 1fr);
+
+    column-gap: 15px;
+
+    align-items: center;
+
+    text-align: left;
+
+    border-right: none;
+  }
+
+
+  /* Divider between every mobile item */
+
+  .software-process-step:not(:first-child) {
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .software-process-step:hover {
+    background: #ffffff;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE NUMBER
+  ------------------------------------------------------- */
+
+  .software-process-number {
+    width: 46px;
+    height: 46px;
+  }
+
+  .software-process-number span {
+    width: 36px;
+    height: 36px;
+
+    font-size: 11px;
+  }
+
+  /* Don't rotate ring on mobile */
+
+  .software-process-step:hover .software-process-number::before {
+    transform: none;
+  }
+
+  .software-process-step:hover .software-process-number span {
+    box-shadow:
+      0 5px 14px rgba(2, 86, 255, 0.18);
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE ICON
+  ------------------------------------------------------- */
+
+  .software-process-icon {
+    width: 52px;
+    height: 52px;
+
+    margin: 0;
+
+    border-radius: 10px;
+  }
+
+  .software-process-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  /* Disable hover fill on touch devices */
+
+  .software-process-step:hover .software-process-icon {
+    background: #edf4ff;
+
+    color: #0256ff;
+
+    transform: none;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE CONTENT
+  ------------------------------------------------------- */
+
+  .software-process-step-content {
+    max-width: none;
+
+    min-width: 0;
+  }
+
+  .software-process-step-content h3 {
+    margin: 1px 0 5px;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+  }
+
+  .software-process-step-content p {
+    max-width: 360px;
+
+    font-size: 12.5px;
+
+    line-height: 1.55;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES — 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .software-process-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .software-process-title {
+    font-size: 1.8rem;
+  }
+
+  .software-process-description {
+    font-size: 13.5px;
+  }
+
+
+  /* -------------------------------------------------------
+     SMALL PHONE PROCESS ROW
+  ------------------------------------------------------- */
+
+  .software-process-step,
+  .software-process-step:nth-child(2n) {
+
+    padding: 21px 16px;
+
+    grid-template-columns:
+      40px
+      45px
+      minmax(0, 1fr);
+
+    column-gap: 11px;
+  }
+
+
+  /* -------------------------------------------------------
+     SMALL PHONE NUMBER
+  ------------------------------------------------------- */
+
+  .software-process-number {
+    width: 40px;
+    height: 40px;
+  }
+
+  .software-process-number span {
+    width: 32px;
+    height: 32px;
+
+    font-size: 10px;
+  }
+
+
+  /* -------------------------------------------------------
+     SMALL PHONE ICON
+  ------------------------------------------------------- */
+
+  .software-process-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 8px;
+  }
+
+  .software-process-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  /* -------------------------------------------------------
+     SMALL PHONE CONTENT
+  ------------------------------------------------------- */
+
+  .software-process-step-content h3 {
+    font-size: 13.5px;
+
+    line-height: 1.35;
+  }
+
+  .software-process-step-content p {
+    font-size: 12px;
+
+    line-height: 1.5;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL — 340px
+========================================================= */
+
+@media (max-width: 340px) {
+
+  .software-process-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .software-process-step,
+  .software-process-step:nth-child(2n) {
+
+    padding: 18px 13px;
+
+    grid-template-columns:
+      36px
+      41px
+      minmax(0, 1fr);
+
+    column-gap: 9px;
+  }
+
+  .software-process-number {
+    width: 36px;
+    height: 36px;
+  }
+
+  .software-process-number span {
+    width: 29px;
+    height: 29px;
+
+    font-size: 9px;
+  }
+
+  .software-process-icon {
+    width: 41px;
+    height: 41px;
+  }
+
+  .software-process-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .software-process-step-content h3 {
+    font-size: 12.5px;
+  }
+
+  .software-process-step-content p {
+    font-size: 11.5px;
+  }
+}

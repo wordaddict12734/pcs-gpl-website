@@ -26,7 +26,7 @@ const Footer = () => {
 
               {/* Actual PCS logo */}
               <img
-                src="/images/logo/white-logo.png"
+                src="/images/logo/logo.png"
                 alt="PCS"
                 className="footer-logo-image"
               />

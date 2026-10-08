@@ -1,0 +1,548 @@
+/* =========================================================
+   LOCATION HERO
+========================================================= */
+
+.location-hero {
+  position: relative;
+  min-height: 410px;
+  width: 100%;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      #f2f7fc 0%,
+      #f7fafe 35%,
+      rgba(255, 255, 255, 0.75) 58%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  font-family:
+    "Plus Jakarta Sans",
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.location-hero-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.location-hero-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transform: scale(1.02);
+}
+
+
+/* =========================================================
+   IMAGE FADE
+========================================================= */
+
+.location-hero-fade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f2f7fc 0%,
+      #f2f7fc 22%,
+      rgba(242, 247, 252, 0.96) 32%,
+      rgba(242, 247, 252, 0.76) 40%,
+      rgba(242, 247, 252, 0.28) 51%,
+      rgba(242, 247, 252, 0) 64%
+    );
+}
+
+
+/* =========================================================
+   CONTENT CONTAINER
+========================================================= */
+
+.location-hero-container {
+  position: relative;
+  z-index: 5;
+
+  width: min(1240px, calc(100% - 80px));
+  min-height: 410px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.location-hero-content {
+  width: 47%;
+  padding: 45px 0;
+}
+
+
+/* =========================================================
+   CATEGORY TAG
+========================================================= */
+
+.location-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 18px;
+
+  color: #0256ff;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.location-hero-tag i {
+  display: block;
+
+  width: 42px;
+  height: 2px;
+
+  background: #0256ff;
+
+  border-radius: 999px;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.location-hero-title {
+  margin: 0;
+
+  max-width: 560px;
+
+  color: #0f172a;
+
+  font-size: clamp(42px, 4.2vw, 64px);
+  line-height: 1.08;
+
+  font-weight: 800;
+  letter-spacing: -2.4px;
+}
+
+.location-hero-title span {
+  display: block;
+
+  color: #0f172a;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.location-hero-description {
+  max-width: 525px;
+
+  margin: 22px 0 0;
+
+  color: #526174;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   THIN DIAGONAL LINES
+========================================================= */
+
+.location-hero-line {
+  position: absolute;
+
+  width: 2px;
+  height: 470px;
+
+  z-index: 2;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 86, 255, 0),
+    rgba(2, 86, 255, 0.35),
+    rgba(2, 86, 255, 0)
+  );
+
+  transform: rotate(35deg);
+
+  pointer-events: none;
+}
+
+.location-hero-line-one {
+  top: -115px;
+  right: 49%;
+}
+
+.location-hero-line-two {
+  top: -135px;
+  right: 47%;
+
+  height: 510px;
+
+  opacity: 0.55;
+}
+
+
+/* =========================================================
+   BOLD BLUE DIAGONAL SLASH
+========================================================= */
+
+.location-hero-slash {
+  position: absolute;
+
+  top: -60px;
+  right: -20px;
+
+  width: 18px;
+  height: 530px;
+
+  z-index: 4;
+
+  background: #0256ff;
+
+  transform: rotate(23deg);
+
+  box-shadow:
+    0 0 25px rgba(2, 86, 255, 0.18);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .location-hero {
+    min-height: 390px;
+  }
+
+  .location-hero-container {
+    min-height: 390px;
+    width: min(1120px, calc(100% - 60px));
+  }
+
+  .location-hero-content {
+    width: 50%;
+  }
+
+  .location-hero-image {
+    width: 65%;
+  }
+
+  .location-hero-title {
+    font-size: clamp(40px, 4.5vw, 58px);
+  }
+
+  .location-hero-line-one {
+    right: 37%;
+  }
+
+  .location-hero-line-two {
+    right: 32%;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .location-hero {
+    min-height: 560px;
+
+    background: #f2f7fc;
+  }
+
+  .location-hero-container {
+    min-height: 560px;
+
+    width: calc(100% - 60px);
+
+    align-items: flex-start;
+  }
+
+  .location-hero-content {
+    width: 65%;
+
+    padding-top: 95px;
+  }
+
+  .location-hero-image {
+    width: 100%;
+    height: 65%;
+
+    top: auto;
+    bottom: 0;
+  }
+
+  .location-hero-fade {
+    background:
+      linear-gradient(
+        180deg,
+        #f2f7fc 0%,
+        #f2f7fc 35%,
+        rgba(242, 247, 252, 0.94) 47%,
+        rgba(242, 247, 252, 0.3) 68%,
+        rgba(242, 247, 252, 0) 100%
+      );
+  }
+
+  .location-hero-title {
+    font-size: clamp(40px, 6vw, 54px);
+  }
+
+  .location-hero-description {
+    max-width: 560px;
+  }
+
+  .location-hero-line-one {
+    right: 25%;
+    top: 20px;
+  }
+
+  .location-hero-line-two {
+    right: 18%;
+    top: 10px;
+  }
+
+  .location-hero-slash {
+    right: -32px;
+    top: 150px;
+    height: 430px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .location-hero {
+    min-height: 620px;
+  }
+
+  .location-hero-container {
+    min-height: 620px;
+
+    width: calc(100% - 40px);
+
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .location-hero-content {
+    width: 100%;
+
+    padding-top: 62px;
+
+    position: relative;
+    z-index: 10;
+  }
+
+  .location-hero-tag {
+    margin-bottom: 16px;
+
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .location-hero-tag i {
+    width: 32px;
+  }
+
+  .location-hero-title {
+    max-width: 500px;
+
+    font-size: clamp(38px, 10.5vw, 48px);
+    line-height: 1.08;
+
+    letter-spacing: -1.8px;
+  }
+
+  .location-hero-description {
+    max-width: 470px;
+
+    margin-top: 18px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #526174;
+  }
+
+  .location-hero-image {
+    width: 100%;
+    height: 52%;
+
+    bottom: 0;
+  }
+
+  .location-hero-image img {
+    object-position: center;
+  }
+
+  .location-hero-fade {
+    background:
+      linear-gradient(
+        180deg,
+        #f2f7fc 0%,
+        #f2f7fc 34%,
+        rgba(242, 247, 252, 0.96) 45%,
+        rgba(242, 247, 252, 0.55) 60%,
+        rgba(242, 247, 252, 0.08) 80%,
+        rgba(242, 247, 252, 0) 100%
+      );
+  }
+
+  .location-hero-line-one {
+    top: 110px;
+    right: 13%;
+
+    height: 380px;
+
+    opacity: 0.35;
+  }
+
+  .location-hero-line-two {
+    top: 90px;
+    right: 3%;
+
+    height: 390px;
+
+    opacity: 0.25;
+  }
+
+  .location-hero-slash {
+    top: 260px;
+    right: -35px;
+
+    width: 12px;
+    height: 300px;
+
+    transform: rotate(23deg);
+
+    opacity: 0.9;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .location-hero {
+    min-height: 590px;
+  }
+
+  .location-hero-container {
+    min-height: 590px;
+
+    width: calc(100% - 32px);
+  }
+
+  .location-hero-content {
+    padding-top: 52px;
+  }
+
+  .location-hero-title {
+    font-size: 37px;
+    letter-spacing: -1.5px;
+  }
+
+  .location-hero-description {
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+
+  .location-hero-image {
+    height: 49%;
+  }
+
+  .location-hero-slash {
+    right: -38px;
+    top: 270px;
+
+    width: 10px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .location-hero {
+    min-height: 570px;
+  }
+
+  .location-hero-container {
+    min-height: 570px;
+
+    width: calc(100% - 28px);
+  }
+
+  .location-hero-content {
+    padding-top: 45px;
+  }
+
+  .location-hero-tag {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+  }
+
+  .location-hero-title {
+    font-size: 34px;
+  }
+
+  .location-hero-description {
+    font-size: 13px;
+  }
+
+  .location-hero-image {
+    height: 47%;
+  }
+}

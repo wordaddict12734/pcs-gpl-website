@@ -1,0 +1,988 @@
+
+/* =========================================================
+   GOOGLE FONTS
+========================================================= */
+
+@import url(
+  'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@500;600;700;800&display=swap'
+);
+
+
+/* =========================================================
+   SOFTWARE DEVELOPMENT HERO
+========================================================= */
+
+.software-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 650px;
+
+  display: flex;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  /*
+     Manrope gives the overall section a
+     cleaner corporate / modern feel.
+  */
+  font-family: "Manrope", sans-serif;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.software-content {
+  position: relative;
+
+  z-index: 5;
+
+  width: 53%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 80px 6% 80px 7%;
+
+  background: transparent;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.software-breadcrumb {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 11px;
+
+  margin-bottom: 21px;
+
+  /*
+     Keep the mono font ONLY here.
+     It gives the breadcrumb a subtle
+     technical/software feel.
+  */
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  letter-spacing: 1.8px;
+
+  text-transform: uppercase;
+
+  color: #216db7;
+}
+
+
+.software-breadcrumb b {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  color: #9aafc5;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.software-content h1 {
+  max-width: 690px;
+
+  margin: 0;
+
+  /*
+     Strong Manrope heading.
+  */
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(43px, 4.05vw, 64px);
+
+  font-weight: 800;
+
+  line-height: 1.055;
+
+  letter-spacing: -2.5px;
+
+  color: #0b2858;
+
+  text-wrap: balance;
+}
+
+
+.software-content h1 span {
+  color: #086ee8;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.software-description {
+  max-width: 585px;
+
+  margin: 26px 0 0;
+
+  /*
+     DM Sans is softer than Manrope for
+     longer paragraphs.
+  */
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  line-height: 1.72;
+
+  letter-spacing: -0.05px;
+
+  color: #58718d;
+}
+
+
+/* =========================================================
+   BUTTON CONTAINER
+========================================================= */
+
+.software-buttons {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 32px;
+}
+
+
+/* =========================================================
+   BUTTON BASE
+========================================================= */
+
+.software-btn {
+  min-height: 52px;
+
+  padding: 0 25px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border-radius: 28px;
+
+  /*
+     Manrope works better for UI labels
+     than the current Inter.
+  */
+  font-family: "Manrope", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.primary-btn {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0874ed 0%,
+      #1458d5 100%
+    );
+
+  box-shadow:
+    0 9px 24px rgba(8, 110, 232, 0.20);
+}
+
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 30px rgba(8, 110, 232, 0.28);
+}
+
+
+.primary-btn svg {
+  width: 17px;
+  height: 17px;
+
+  flex-shrink: 0;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.primary-btn:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.secondary-btn {
+  color: #1768ad;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1.5px solid #79afe5;
+}
+
+
+.secondary-btn:hover {
+  transform: translateY(-3px);
+
+  background: #f4f9ff;
+
+  border-color: #1670d8;
+
+  box-shadow:
+    0 8px 20px rgba(8, 110, 232, 0.10);
+}
+
+/* =========================================================
+   RIGHT IMAGE AREA
+========================================================= */
+
+.software-visual {
+  position: relative;
+
+  z-index: 1;
+
+  /*
+     Slightly wider than the visible right half.
+     This allows the photograph to extend beneath
+     the white content area.
+  */
+  width: 53%;
+
+  min-height: 650px;
+
+  margin-left: -6%;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+
+.software-image-wrapper {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.software-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: 55% center;
+
+  transform: scale(1.02);
+
+  transition:
+    transform 0.8s ease;
+}
+
+.software-hero:hover .software-image {
+  transform: scale(1.045);
+}
+
+
+/* =========================================================
+   WHITE → IMAGE FADE
+========================================================= */
+
+/*
+   This creates the soft transition from the
+   white content into the photograph.
+
+   IMPORTANT:
+
+   We are NOT making the actual image transparent.
+
+   We are putting a white gradient ON TOP of
+   the left edge of the photograph.
+*/
+
+.software-image-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 2;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 260px;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to right,
+
+      #ffffff 0%,
+
+      rgba(255, 255, 255, 0.99) 12%,
+
+      rgba(255, 255, 255, 0.94) 27%,
+
+      rgba(255, 255, 255, 0.78) 42%,
+
+      rgba(255, 255, 255, 0.53) 58%,
+
+      rgba(255, 255, 255, 0.25) 76%,
+
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+
+/* =========================================================
+   VERY SUBTLE IMAGE LIGHTING
+========================================================= */
+
+.software-image-wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  z-index: 1;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to right,
+
+      rgba(255, 255, 255, 0.08) 0%,
+
+      rgba(255, 255, 255, 0.025) 32%,
+
+      transparent 57%
+    );
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .software-hero {
+    min-height: 700px;
+  }
+
+
+  .software-content {
+    padding-left: 8%;
+  }
+
+
+  .software-content h1 {
+    max-width: 720px;
+
+    font-size: 66px;
+
+    letter-spacing: -2.9px;
+  }
+
+
+  .software-description {
+    max-width: 600px;
+
+    font-size: 16px;
+  }
+
+
+  .software-visual {
+    min-height: 700px;
+  }
+
+
+  .software-image-wrapper::before {
+    width: 300px;
+  }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .software-content {
+    width: 55%;
+
+    padding-left: 6%;
+
+    padding-right: 4%;
+  }
+
+
+  .software-visual {
+    width: 51%;
+
+    margin-left: -6%;
+  }
+
+
+  .software-content h1 {
+    font-size: clamp(
+      40px,
+      4.3vw,
+      55px
+    );
+
+    letter-spacing: -2px;
+  }
+
+
+  .software-description {
+    max-width: 535px;
+
+    font-size: 15px;
+  }
+
+
+  .software-image-wrapper::before {
+    width: 220px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .software-hero {
+    min-height: 590px;
+  }
+
+
+  .software-content {
+    width: 58%;
+
+    padding:
+      65px
+      4%
+      65px
+      5%;
+  }
+
+
+  .software-visual {
+    width: 48%;
+
+    min-height: 590px;
+
+    margin-left: -6%;
+  }
+
+
+  .software-breadcrumb {
+    margin-bottom: 17px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .software-content h1 {
+    font-size: 43px;
+
+    line-height: 1.07;
+
+    letter-spacing: -1.7px;
+  }
+
+
+  .software-description {
+    max-width: 500px;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  .software-buttons {
+    margin-top: 27px;
+  }
+
+
+  .software-btn {
+    min-height: 49px;
+
+    padding: 0 21px;
+
+    font-size: 12px;
+  }
+
+
+  .software-image-wrapper::before {
+    width: 190px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET PORTRAIT
+========================================================= */
+
+@media (max-width: 820px) {
+
+  /*
+     At this point the side-by-side layout
+     becomes too cramped.
+
+     We switch to a clean vertical layout.
+  */
+
+  .software-hero {
+    min-height: auto;
+
+    flex-direction: column;
+
+    overflow: hidden;
+  }
+
+
+  /* -------------------------------------------------------
+     CONTENT
+  ------------------------------------------------------- */
+
+  .software-content {
+    width: 100%;
+
+    padding:
+      65px
+      7%
+      50px;
+
+    order: 1;
+
+    background:
+      linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #f8fbff 100%
+      );
+  }
+
+
+  .software-breadcrumb {
+    margin-bottom: 17px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.45px;
+  }
+
+
+  .software-content h1 {
+    max-width: 680px;
+
+    font-size: clamp(
+      38px,
+      6vw,
+      50px
+    );
+
+    line-height: 1.07;
+
+    letter-spacing: -1.8px;
+  }
+
+
+  .software-description {
+    max-width: 650px;
+
+    margin-top: 20px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+
+  .software-buttons {
+    margin-top: 27px;
+  }
+
+
+  /* -------------------------------------------------------
+     IMAGE
+  ------------------------------------------------------- */
+
+  .software-visual {
+    width: 100%;
+
+    height: 480px;
+
+    min-height: 480px;
+
+    margin-left: 0;
+
+    order: 2;
+
+    background: #ffffff;
+  }
+
+
+  .software-image {
+    object-position: 58% center;
+
+    transform: scale(1.02);
+  }
+
+
+  .software-hero:hover .software-image {
+    transform: scale(1.02);
+  }
+  .software-image-wrapper::before {
+    top: 0;
+    bottom: auto;
+    left: 0;
+
+    width: 100%;
+    height: 115px;
+
+    background:
+      linear-gradient(
+        to bottom,
+
+        #ffffff 0%,
+
+        rgba(255, 255, 255, 0.96) 20%,
+
+        rgba(255, 255, 255, 0.68) 45%,
+
+        rgba(255, 255, 255, 0.25) 72%,
+
+        rgba(255, 255, 255, 0) 100%
+      );
+  }
+
+
+  .software-image-wrapper::after {
+    background:
+      linear-gradient(
+        to bottom,
+
+        rgba(255, 255, 255, 0.10),
+
+        transparent 38%
+      );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .software-content {
+    padding:
+      55px
+      22px
+      40px;
+  }
+
+
+  /* -------------------------------------------------------
+     BREADCRUMB
+  ------------------------------------------------------- */
+
+  .software-breadcrumb {
+    gap: 7px;
+
+    margin-bottom: 15px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.25px;
+
+    line-height: 1.6;
+  }
+
+
+  /* -------------------------------------------------------
+     HEADING
+  ------------------------------------------------------- */
+
+  .software-content h1 {
+    font-size: clamp(
+      34px,
+      9.5vw,
+      44px
+    );
+
+    line-height: 1.08;
+
+    letter-spacing: -1.4px;
+  }
+
+
+  /* -------------------------------------------------------
+     DESCRIPTION
+  ------------------------------------------------------- */
+
+  .software-description {
+    margin-top: 19px;
+
+    font-size: 14px;
+
+    line-height: 1.68;
+
+    letter-spacing: 0;
+  }
+
+
+  /* -------------------------------------------------------
+     BUTTONS
+  ------------------------------------------------------- */
+
+  .software-buttons {
+    width: 100%;
+
+    margin-top: 25px;
+
+    gap: 10px;
+  }
+
+
+  .software-btn {
+    min-height: 47px;
+
+    padding: 0 17px;
+
+    font-size: 12px;
+  }
+
+
+  /* -------------------------------------------------------
+     IMAGE
+  ------------------------------------------------------- */
+
+  .software-visual {
+    height: 400px;
+
+    min-height: 400px;
+  }
+
+
+  .software-image {
+    object-position: 58% center;
+
+    transform: scale(1.03);
+  }
+
+
+  .software-hero:hover .software-image {
+    transform: scale(1.03);
+  }
+
+
+  .software-image-wrapper::before {
+    height: 95px;
+
+    background:
+      linear-gradient(
+        to bottom,
+
+        #ffffff 0%,
+
+        rgba(255, 255, 255, 0.95) 20%,
+
+        rgba(255, 255, 255, 0.65) 45%,
+
+        rgba(255, 255, 255, 0.25) 72%,
+
+        rgba(255, 255, 255, 0) 100%
+      );
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .software-content {
+    padding:
+      48px
+      18px
+      35px;
+  }
+
+
+  .software-breadcrumb {
+    font-size: 8px;
+
+    letter-spacing: 1.05px;
+  }
+
+
+  .software-content h1 {
+    font-size: 33px;
+
+    line-height: 1.09;
+
+    letter-spacing: -1.1px;
+  }
+
+
+  .software-description {
+    font-size: 13.5px;
+
+    line-height: 1.65;
+  }
+
+
+  .software-buttons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+  }
+
+
+  .software-btn {
+    width: 100%;
+
+    min-height: 46px;
+
+    padding: 0 8px;
+
+    font-size: 11px;
+  }
+
+
+  .software-visual {
+    height: 350px;
+
+    min-height: 350px;
+  }
+
+
+  .software-image {
+    object-position: 58% center;
+  }
+
+
+  .software-image-wrapper::before {
+    height: 80px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 340px) {
+
+  .software-content h1 {
+    font-size: 30px;
+
+    letter-spacing: -0.9px;
+  }
+
+
+  .software-description {
+    font-size: 13px;
+  }
+
+
+  .software-btn {
+    font-size: 10.5px;
+  }
+
+}

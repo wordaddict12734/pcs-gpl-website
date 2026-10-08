@@ -1,0 +1,551 @@
+
+/* =========================================================
+   SOFTWARE DEVELOPMENT — WHY CHOOSE US
+========================================================= */
+
+.software-why-us {
+  width: 100%;
+  background: #ffffff;
+
+  font-family:
+    "Plus Jakarta Sans",
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.software-why-us-container {
+  width: 100%;
+  max-width: 1380px;
+
+  margin: 0 auto;
+  padding: 100px 60px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+  align-items: center;
+  gap: 90px;
+}
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.software-why-content {
+  max-width: 590px;
+}
+
+/* =========================================================
+   CATEGORY TAG
+========================================================= */
+
+.software-why-tag {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  color: #0256ff;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+/* Small line beside tag */
+
+.software-why-tag::before {
+  content: "";
+
+  width: 28px;
+  height: 2px;
+
+  margin-right: 10px;
+
+  background: #0256ff;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.software-why-title {
+  margin: 0;
+
+  max-width: 580px;
+
+  color: #0f172a;
+
+  font-size: clamp(2.2rem, 4vw, 2.8rem);
+  font-weight: 750;
+
+  line-height: 1.15;
+  letter-spacing: -1.4px;
+}
+
+.software-why-title span {
+  color: #0256ff;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.software-why-description {
+  max-width: 540px;
+
+  margin: 24px 0 32px;
+
+  color: #64748b;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.software-why-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 14px 23px;
+
+  border-radius: 50px;
+
+  background: #0256ff;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  box-shadow: 0 8px 24px rgba(2, 86, 255, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.software-why-button svg {
+  transition: transform 0.25s ease;
+}
+
+.software-why-button:hover {
+  background: #0045d8;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 28px rgba(2, 86, 255, 0.25);
+}
+
+.software-why-button:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   RIGHT VISUAL
+========================================================= */
+
+.software-why-visual {
+  position: relative;
+
+  width: 100%;
+  min-height: 490px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+
+.software-why-image-wrapper {
+  position: relative;
+  z-index: 2;
+
+  width: 88%;
+  height: 455px;
+
+  margin-left: auto;
+
+  overflow: hidden;
+
+  clip-path: polygon(
+    8% 0%,
+    100% 0%,
+    100% 88%,
+    91% 100%,
+    0% 100%,
+    0% 12%
+  );
+
+  background: #e8eef7;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.software-why-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.7s ease;
+}
+
+.software-why-visual:hover .software-why-image {
+  transform: scale(1.025);
+}
+
+/* =========================================================
+   BLUE GEOMETRIC SHAPES
+========================================================= */
+
+.software-why-shape {
+  position: absolute;
+
+  pointer-events: none;
+}
+
+/* Large blue diagonal */
+
+.software-why-shape-one {
+  z-index: 0;
+
+  width: 230px;
+  height: 230px;
+
+  right: -5px;
+  bottom: -20px;
+
+  background: #0256ff;
+
+  clip-path: polygon(
+    30% 0%,
+    100% 0%,
+    100% 70%,
+    70% 100%,
+    0% 100%
+  );
+}
+
+/* Smaller blue accent */
+
+.software-why-shape-two {
+  z-index: 1;
+
+  width: 125px;
+  height: 125px;
+
+  left: 15px;
+  top: 5px;
+
+  background: #1e6091;
+
+  opacity: 0.9;
+
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    0% 100%
+  );
+}
+
+/* =========================================================
+   FLOATING CARD
+========================================================= */
+
+.software-why-card {
+  position: absolute;
+
+  z-index: 5;
+
+  right: -20px;
+  top: 15%;
+
+  transform: translateY(-50%);
+
+  width: 205px;
+
+  padding: 25px 27px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 16px;
+
+  background: rgba(7, 27, 52, 0.94);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.22),
+    0 8px 20px rgba(15, 23, 42, 0.12);
+
+  backdrop-filter: blur(10px);
+}
+
+.software-why-card span {
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 1.4;
+}
+
+.software-why-card strong {
+  margin: 2px 0;
+
+  color: #ffffff;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+  .software-why-us-container {
+    padding: 80px 40px;
+
+    gap: 55px;
+  }
+
+  .software-why-title {
+    font-size: 2.35rem;
+  }
+
+  .software-why-visual {
+    min-height: 440px;
+  }
+
+  .software-why-image-wrapper {
+    height: 410px;
+  }
+
+  .software-why-card {
+    right: 0;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+  .software-why-us-container {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    padding: 75px 40px;
+  }
+
+  .software-why-content {
+    max-width: 720px;
+  }
+
+  .software-why-title {
+    max-width: 700px;
+  }
+
+  .software-why-description {
+    max-width: 680px;
+  }
+
+  .software-why-visual {
+    min-height: 500px;
+  }
+
+  .software-why-image-wrapper {
+    width: 92%;
+    height: 470px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .software-why-us-container {
+    padding: 65px 20px 70px;
+
+    gap: 45px;
+  }
+
+  /* Tag */
+
+  .software-why-tag {
+    margin-bottom: 15px;
+
+    font-size: 0.74rem;
+    letter-spacing: 1.3px;
+  }
+
+  .software-why-tag::before {
+    width: 22px;
+    margin-right: 8px;
+  }
+
+  /* Heading */
+
+  .software-why-title {
+    font-size: 2rem;
+
+    line-height: 1.18;
+    letter-spacing: -0.8px;
+  }
+
+  /* Description */
+
+  .software-why-description {
+    margin: 19px 0 27px;
+
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  /* Button */
+
+  .software-why-button {
+    padding: 13px 20px;
+
+    font-size: 13.5px;
+  }
+
+  /* Visual */
+
+  .software-why-visual {
+    min-height: 380px;
+  }
+
+  /* Image */
+
+  .software-why-image-wrapper {
+    width: 94%;
+    height: 360px;
+
+    margin-left: auto;
+
+    clip-path: polygon(
+      7% 0%,
+      100% 0%,
+      100% 91%,
+      91% 100%,
+      0% 100%,
+      0% 9%
+    );
+  }
+
+  /* Shapes */
+
+  .software-why-shape-one {
+    width: 150px;
+    height: 150px;
+
+    right: -5px;
+    bottom: -8px;
+  }
+
+  .software-why-shape-two {
+    width: 85px;
+    height: 85px;
+
+    left: 3px;
+    top: 5px;
+  }
+
+  /* Floating card */
+
+  .software-why-card {
+    right: -2px;
+    top: auto;
+    bottom: 18px;
+
+    transform: none;
+
+    width: 165px;
+
+    padding: 17px 19px;
+
+    border-radius: 13px;
+  }
+
+  .software-why-card span {
+    font-size: 11.5px;
+  }
+
+  .software-why-card strong {
+    font-size: 20px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .software-why-us-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .software-why-title {
+    font-size: 1.8rem;
+  }
+
+  .software-why-description {
+    font-size: 13.5px;
+  }
+
+  .software-why-visual {
+    min-height: 340px;
+  }
+
+  .software-why-image-wrapper {
+    height: 325px;
+  }
+
+  .software-why-card {
+    width: 150px;
+    padding: 15px 17px;
+  }
+
+  .software-why-card strong {
+    font-size: 18px;
+  }
+}
+
