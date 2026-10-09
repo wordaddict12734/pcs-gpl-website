@@ -23,7 +23,7 @@ function Navbar() {
 
           <div className="logo-text">
             <div className="logo-name">
-              <span>PCS</span><strong>GPL</strong>
+              <span>PCS</span><strong> Global</strong>
             </div>
 
             <div className="logo-full-name">

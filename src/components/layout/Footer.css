@@ -1,65 +1,86 @@
-
 /* ========================================
-   FOOTER
+   PCS GPL — MODERN CORPORATE FOOTER
 ======================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
 
-
 .footer {
+  --footer-bg: #071b35;
+  --footer-bottom-bg: #05152b;
+  --footer-blue: #0b63f6;
+  --footer-accent: #65b4ed;
+  --footer-text: #f4f8fc;
+  --footer-muted: #a4b7cb;
+  --footer-subtle: #7890aa;
+  --footer-border: rgba(255, 255, 255, 0.09);
+
+  position: relative;
   width: 100%;
-
+  overflow: hidden;
+  color: var(--footer-text);
   font-family: "IBM Plex Sans", sans-serif;
-
-  color: #f4f8fc;
+  background: var(--footer-bg);
 }
-
 
 /* ========================================
    MAIN FOOTER
 ======================================== */
 
 .footer-main {
+  position: relative;
   background:
+    radial-gradient(
+      ellipse at 5% 0%,
+      rgba(11, 99, 246, 0.13),
+      transparent 38%
+    ),
     linear-gradient(
-      120deg,
-      #163b5c 0%,
-      #12334f 48%,
-      #0e2942 100%
+      125deg,
+      #0b2442 0%,
+      #081d37 52%,
+      #07182f 100%
     );
-
-  color: #ffffff;
 }
 
+/* Restrained decorative glow */
+
+.footer-main::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(101, 180, 237, 0.5),
+    transparent
+  );
+  content: "";
+}
 
 .footer-container {
-  width: 100%;
-  max-width: 1400px;
-
-  margin: 0 auto;
-
-  padding: 60px 45px;
-
+  position: relative;
   display: grid;
-
   grid-template-columns:
-    1.5fr
+    1.45fr
     0.8fr
     1fr
-    1.2fr;
-
-  gap: 55px;
+    1.15fr;
+  gap: 48px;
+  width: min(1400px, calc(100% - 90px));
+  margin: 0 auto;
+  padding: 68px 0 62px;
 }
 
-
 /* ========================================
-   COMPANY
+   COMPANY COLUMN
 ======================================== */
 
 .footer-company {
-  max-width: 340px;
+  max-width: 350px;
+  min-width: 0;
 }
-
 
 /* ========================================
    FOOTER LOGO
@@ -68,150 +89,87 @@
 .footer-logo {
   display: inline-flex;
   align-items: center;
-
-  text-decoration: none;
-
-  margin-bottom: 18px;
-
+  max-width: 100%;
+  margin-bottom: 22px;
   color: #ffffff;
-
+  text-decoration: none;
   transition: opacity 0.25s ease;
 }
 
-
 .footer-logo:hover {
-  opacity: 0.9;
+  opacity: 0.88;
 }
-
-
-/* ========================================
-   ACTUAL PCS LOGO
-======================================== */
 
 .footer-logo-image {
-  width: 58px;
-  height: 58px;
-
-  object-fit: contain;
-
   display: block;
-
+  width: 54px;
+  height: 54px;
   flex-shrink: 0;
-
-  /*
-     Small white/light backing makes the
-     black part of the logo visible.
-  */
-
-  background: #ffffff;
-
-  border-radius: 8px;
-
   padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9px;
+  background: #ffffff;
+  object-fit: contain;
 }
-
-
-/* ========================================
-   VERTICAL DIVIDER
-======================================== */
 
 .footer-logo-divider {
   width: 1px;
-  height: 48px;
-
-  margin: 0 14px;
-
-  background: rgba(255, 255, 255, 0.25);
-
+  height: 43px;
   flex-shrink: 0;
+  margin: 0 13px;
+  background: rgba(255, 255, 255, 0.23);
 }
-
-
-/* ========================================
-   LOGO TEXT
-======================================== */
 
 .footer-logo-content {
   display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
   min-width: 0;
+  flex-direction: column;
+  justify-content: center;
 }
-
 
 .footer-logo-name {
   color: #ffffff;
-
   font-family: "Manrope", sans-serif;
-
   font-size: 22px;
-
-  line-height: 23px;
-
   font-weight: 800;
-
-  letter-spacing: 0.5px;
-
+  letter-spacing: 0.4px;
+  line-height: 1.2;
   white-space: nowrap;
 }
-
 
 .footer-logo-name span {
   color: #ffffff;
 }
 
-
 .footer-logo-name strong {
-  color: #65b4ed;
-
+  color: var(--footer-accent);
   font-weight: 800;
 }
 
-
-/* ========================================
-   FULL COMPANY NAME
-======================================== */
-
 .footer-logo-full-name {
-  margin-top: 4px;
-
-  color: #9fb8cc;
-
+  margin-top: 5px;
+  color: #9db4ca;
   font-family: "IBM Plex Sans", sans-serif;
-
   font-size: 6.5px;
-
-  line-height: 8px;
-
   font-weight: 500;
-
   letter-spacing: 0.15px;
-
+  line-height: 1.4;
   white-space: nowrap;
 }
-
 
 /* ========================================
    COMPANY DESCRIPTION
 ======================================== */
 
 .footer-company p {
-  margin: 0;
-
   max-width: 300px;
-
-  color: #b8cad9;
-
+  margin: 0;
+  color: var(--footer-muted);
   font-family: "IBM Plex Sans", sans-serif;
-
   font-size: 13px;
-
-  line-height: 1.75;
+  font-weight: 400;
+  line-height: 1.9;
 }
-
 
 /* ========================================
    COMPANY LINK
@@ -219,45 +177,29 @@
 
 .footer-company-link {
   display: inline-flex;
-
   align-items: center;
-
-  gap: 7px;
-
-  margin-top: 19px;
-
-  color: #61afe9;
-
-  text-decoration: none;
-
+  gap: 8px;
+  margin-top: 22px;
+  color: var(--footer-accent);
   font-family: "IBM Plex Sans", sans-serif;
-
-  font-size: 13px;
-
+  font-size: 12px;
   font-weight: 600;
-
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease;
+  text-decoration: none;
+  transition: color 0.25s ease;
 }
-
 
 .footer-company-link svg {
-  font-size: 13px;
-
-  transition: transform 0.2s ease;
+  font-size: 15px;
+  transition: transform 0.25s ease;
 }
-
 
 .footer-company-link:hover {
   color: #ffffff;
 }
 
-
 .footer-company-link:hover svg {
   transform: translate(3px, -3px);
 }
-
 
 /* ========================================
    FOOTER COLUMNS
@@ -265,175 +207,151 @@
 
 .footer-column {
   display: flex;
-
+  min-width: 0;
   flex-direction: column;
-
-  gap: 11px;
+  align-items: flex-start;
+  gap: 13px;
 }
-
 
 .footer-column h3 {
+  position: relative;
   margin: 0 0 10px;
-
+  padding-bottom: 14px;
   color: #ffffff;
-
   font-family: "Manrope", sans-serif;
-
-  font-size: 14px;
-
+  font-size: 13px;
   font-weight: 700;
-
-  letter-spacing: -0.1px;
+  letter-spacing: 0;
 }
 
+.footer-column h3::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--footer-accent);
+  content: "";
+}
 
 /* ========================================
-   COLUMN LINKS
+   FOOTER LINKS
 ======================================== */
 
 .footer-column > a {
-  color: #b2c5d5;
-
-  text-decoration: none;
-
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  color: var(--footer-muted);
   font-family: "IBM Plex Sans", sans-serif;
-
   font-size: 12px;
-
   font-weight: 400;
-
+  line-height: 1.65;
+  text-decoration: none;
+  overflow-wrap: anywhere;
   transition:
-    color 0.2s ease,
-    transform 0.2s ease;
+    color 0.22s ease,
+    transform 0.22s ease;
 }
-
 
 .footer-column > a:hover {
-  color: #ffffff;
-
   transform: translateX(4px);
+  color: #ffffff;
 }
 
-
 /* ========================================
-   CONTACT
+   CONTACT COLUMN
 ======================================== */
 
 .footer-contact {
-  gap: 18px;
+  gap: 21px;
 }
-
 
 .footer-contact-item {
   display: flex;
-
   align-items: flex-start;
-
-  gap: 11px;
+  gap: 12px;
+  min-width: 0;
 }
-
 
 .footer-contact-item > svg {
+  display: block;
   flex-shrink: 0;
-
-  margin-top: 2px;
-
-  color: #5eafe9;
-
+  margin-top: 3px;
+  color: var(--footer-accent);
   font-size: 16px;
+  transition: transform 0.25s ease;
 }
 
+.footer-contact-item:hover > svg {
+  transform: translateY(-2px);
+}
 
-/* Contact label */
+.footer-contact-item > div {
+  min-width: 0;
+}
 
 .footer-contact-item span {
   display: block;
-
-  margin-bottom: 4px;
-
-  color: #86a5bd;
-
+  margin-bottom: 5px;
+  color: var(--footer-subtle);
   font-family: "IBM Plex Sans", sans-serif;
-
   font-size: 9px;
-
   font-weight: 600;
-
-  text-transform: uppercase;
-
   letter-spacing: 1px;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
-
-
-/* Contact value */
 
 .footer-contact-item a,
 .footer-contact-item strong {
   display: block;
-
-  color: #dce9f3;
-
-  text-decoration: none;
-
+  color: #dce7f2;
   font-family: "IBM Plex Sans", sans-serif;
-
   font-size: 12px;
-
   font-weight: 500;
-
-  line-height: 1.5;
+  line-height: 1.85;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
 }
-
 
 .footer-contact-item a:hover {
-  color: #ffffff;
+  color: var(--footer-accent);
 }
 
+.footer-contact-item strong {
+  font-weight: 500;
+}
 
 /* ========================================
    BOTTOM BAR
 ======================================== */
 
 .footer-bottom {
-  background: #0a1f33;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  background: var(--footer-bottom-bg);
+  border-top: 1px solid var(--footer-border);
 }
-
 
 .footer-bottom-container {
-  width: 100%;
-
-  max-width: 1400px;
-
-  margin: 0 auto;
-
-  padding: 18px 45px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
+  gap: 24px;
+  width: min(1400px, calc(100% - 90px));
+  margin: 0 auto;
+  padding: 20px 0;
 }
-
-
-/* ========================================
-   COPYRIGHT
-======================================== */
 
 .footer-bottom p {
   margin: 0;
-
-  color: #7f9bb2;
-
+  color: var(--footer-subtle);
   font-family: "IBM Plex Sans", sans-serif;
-
   font-size: 10px;
-
   font-weight: 400;
+  line-height: 1.8;
 }
-
 
 /* ========================================
    LEGAL LINKS
@@ -441,158 +359,185 @@
 
 .footer-legal {
   display: flex;
-
+  flex-wrap: wrap;
   align-items: center;
-
-  gap: 12px;
+  gap: 13px;
 }
-
 
 .footer-legal a {
-  color: #7f9bb2;
-
-  text-decoration: none;
-
+  color: var(--footer-subtle);
   font-family: "IBM Plex Sans", sans-serif;
-
   font-size: 10px;
-
   font-weight: 500;
-
+  line-height: 1.8;
+  text-decoration: none;
   transition: color 0.2s ease;
 }
-
 
 .footer-legal a:hover {
   color: #ffffff;
 }
 
-
 .footer-legal span {
   width: 1px;
-
-  height: 10px;
-
-  background: rgba(255, 255, 255, 0.25);
+  height: 11px;
+  background: rgba(255, 255, 255, 0.2);
 }
-
 
 /* ========================================
    TABLET
 ======================================== */
 
-@media (max-width: 1000px) {
-
+@media (max-width: 1050px) {
   .footer-container {
-    grid-template-columns:
-      1.4fr
-      1fr
-      1fr;
-
-    gap: 42px;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 42px 32px;
   }
 
   .footer-company {
     grid-column: 1 / -1;
-
     max-width: 500px;
   }
-}
 
+  .footer-bottom-container {
+    gap: 18px;
+  }
+}
 
 /* ========================================
    MOBILE
 ======================================== */
 
 @media (max-width: 650px) {
-
   .footer-container {
-    padding: 48px 22px;
-
-    grid-template-columns:
-      1fr 1fr;
-
-    gap: 38px 25px;
+    width: calc(100% - 44px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 38px 24px;
+    padding: 48px 0 42px;
   }
-
 
   .footer-company {
     grid-column: 1 / -1;
   }
 
-
   .footer-logo-image {
-    width: 54px;
-    height: 54px;
+    width: 50px;
+    height: 50px;
   }
 
+  .footer-logo-divider {
+    height: 40px;
+    margin: 0 11px;
+  }
 
   .footer-logo-name {
     font-size: 20px;
   }
 
-
-  .footer-column h3 {
-    font-size: 13px;
+  .footer-logo-full-name {
+    font-size: 6px;
   }
 
+  .footer-company p {
+    font-size: 12px;
+  }
+
+  .footer-column {
+    gap: 12px;
+  }
+
+  .footer-column h3 {
+    font-size: 12px;
+  }
 
   .footer-column > a {
     font-size: 11px;
   }
 
-
-  .footer-bottom-container {
-    padding: 17px 22px;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 10px;
+  .footer-contact {
+    gap: 19px;
   }
 
-
-  .footer-legal {
+  .footer-contact-item {
     gap: 9px;
   }
-}
 
+  .footer-contact-item a,
+  .footer-contact-item strong {
+    font-size: 11px;
+  }
+
+  .footer-bottom-container {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 9px;
+    width: calc(100% - 44px);
+    padding: 17px 0;
+  }
+
+  .footer-legal {
+    gap: 10px;
+  }
+}
 
 /* ========================================
    SMALL PHONES
 ======================================== */
 
 @media (max-width: 400px) {
-
   .footer-container {
-    grid-template-columns: 1fr;
-
+    width: calc(100% - 32px);
+    grid-template-columns: minmax(0, 1fr);
     gap: 30px;
   }
-
 
   .footer-company {
     grid-column: auto;
   }
 
-
   .footer-company p {
     max-width: 280px;
   }
-
 
   .footer-logo-divider {
     margin: 0 10px;
   }
 
-
   .footer-logo-name {
     font-size: 18px;
   }
 
-
   .footer-logo-full-name {
-    font-size: 5.8px;
+    font-size: 5.6px;
+    letter-spacing: 0;
+  }
+
+  .footer-bottom-container {
+    width: calc(100% - 32px);
+  }
+
+  .footer-legal {
+    gap: 8px;
+  }
+
+  .footer-legal a,
+  .footer-bottom p {
+    font-size: 9px;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-logo,
+  .footer-company-link,
+  .footer-company-link svg,
+  .footer-column > a,
+  .footer-contact-item > svg,
+  .footer-contact-item a,
+  .footer-legal a {
+    transition: none;
   }
 }
