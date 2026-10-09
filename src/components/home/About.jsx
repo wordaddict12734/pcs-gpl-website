@@ -4,7 +4,7 @@ import {
   FiGlobe,
   FiArrowRight,
 } from "react-icons/fi";
-
+import { CiLocationOn } from "react-icons/ci";
 import "./About.css";
 
 const About = () => {
@@ -15,7 +15,7 @@ const About = () => {
         {/* IMAGE */}
         <div className="about-image">
           <img
-            src="/images/about-pcs1.jpeg"
+            src="/images/about-pcs.png"
             alt="PCS Global business environment"
           />
 
@@ -24,6 +24,7 @@ const About = () => {
           <div className="about-image-badge">
             <span>PCS Global</span>
             <small>Technology & Talent</small>
+            <small><CiLocationOn /> Kolkata</small>
           </div>
 
           <div className="about-image-corner"></div>
