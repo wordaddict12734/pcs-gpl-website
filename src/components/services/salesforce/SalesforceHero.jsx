@@ -15,23 +15,22 @@ const SalesforceHero = () => {
       <div className="salesforce-hero-grid"></div>
 
       <div className="salesforce-hero-container">
-
-        {/* =========================
-            LEFT CONTENT
-        ========================= */}
         <div className="salesforce-hero-content">
 
+          {/* Section label */}
           <div className="salesforce-hero-label">
             <span></span>
             SALESFORCE COMPETENCY
           </div>
 
+          {/* Main heading */}
           <h1>
             Salesforce Solutions
             <br />
             <span>Built Around Your Business.</span>
           </h1>
 
+          {/* Description */}
           <p className="salesforce-hero-description">
             We help businesses unlock the full potential of Salesforce
             through tailored implementation, customization, integration,
@@ -45,7 +44,6 @@ const SalesforceHero = () => {
               <div className="salesforce-highlight-icon">
                 <FiUsers />
               </div>
-
               <div>
                 <strong>Business-Focused</strong>
                 <span>Solutions</span>
@@ -56,7 +54,6 @@ const SalesforceHero = () => {
               <div className="salesforce-highlight-icon">
                 <FiCloud />
               </div>
-
               <div>
                 <strong>Seamless</strong>
                 <span>Implementation</span>
@@ -67,7 +64,6 @@ const SalesforceHero = () => {
               <div className="salesforce-highlight-icon">
                 <FiSettings />
               </div>
-
               <div>
                 <strong>Continuous</strong>
                 <span>Support</span>
@@ -76,9 +72,8 @@ const SalesforceHero = () => {
 
           </div>
 
-          {/* CTA */}
+          {/* Call-to-action buttons */}
           <div className="salesforce-hero-actions">
-
             <a href="/#contact" className="salesforce-primary-btn">
               Talk to Our Team
               <FiArrowRight />
@@ -91,32 +86,19 @@ const SalesforceHero = () => {
               <span className="salesforce-play-icon">
                 <FiArrowRight />
               </span>
-
               Explore Capabilities
             </a>
+          </div>
 
+          {/* Decorative bottom indicator */}
+          <div className="salesforce-hero-footer">
+            <span></span>
+            TECHNOLOGY THAT MOVES BUSINESS FORWARD
           </div>
 
         </div>
-
-        {/* =========================
-            RIGHT IMAGE
-        ========================= */}
-        <div className="salesforce-hero-visual">
-
-            <div className="salesforce-hero-glow"></div>
-
-            <img
-                src="/images/salesforce/salesforce-hero.png"
-                alt="Salesforce Solutions"
-                className="salesforce-hero-image"
-            />
-
-        </div>
-
       </div>
 
-      {/* Bottom angled shape */}
       <div className="salesforce-hero-angle"></div>
     </section>
   );
