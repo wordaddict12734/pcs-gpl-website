@@ -4,7 +4,7 @@ import MainLayout from "./layouts/MainLayout";
 import Salesforce from "./pages/services/Salesforce";
 import SoftwareDevelopment from "./pages/services/SoftwareDevelopment";
 import Itconsulting from "./pages/services/Itconsulting";
-import Location from "./pages/location";
+import Location from "./pages/Location";
 function App() {
   return (
     <BrowserRouter>
