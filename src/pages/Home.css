@@ -1,0 +1,2492 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 540px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  font-family: "Manrope", sans-serif;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.hero-container {
+  position: relative;
+
+  width: 100%;
+  max-width: 1600px;
+  min-height: 540px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* ========================================
+   LEFT CONTENT
+======================================== */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 56%;
+
+  padding-left: clamp(30px, 5vw, 80px);
+  padding-right: 45px;
+
+  margin-top: -5px;
+}
+
+
+/* ========================================
+   EYEBROW
+======================================== */
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 18px;
+
+  color: #35638d;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+
+.hero-eyebrow i {
+  display: block;
+
+  width: 28px;
+  height: 1px;
+
+  background: #7f94aa;
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.hero-content h1 {
+  margin: 0;
+
+  color: #071b42;
+
+  font-size: clamp(43px, 4.1vw, 64px);
+
+  line-height: 1.04;
+
+  font-weight: 800;
+
+  letter-spacing: -2.8px;
+}
+
+.hero-content h1 span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #0969dc;
+
+  font-weight: 800;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.hero-content p {
+  max-width: 590px;
+
+  margin: 25px 0 30px;
+
+  color: #50627a;
+
+  font-size: 15.5px;
+
+  line-height: 1.75;
+
+  font-weight: 500;
+
+  letter-spacing: -0.1px;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+.hero-btn {
+  min-height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 25px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: -0.1px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* ========================================
+   PRIMARY BUTTON
+======================================== */
+
+.hero-btn-primary {
+  gap: 13px;
+
+  color: #ffffff;
+
+  background: #0969dc;
+
+  box-shadow:
+    0 8px 20px rgba(9, 105, 220, 0.18);
+}
+
+.hero-btn-primary span {
+  font-size: 19px;
+
+  line-height: 1;
+
+  transition: transform 0.25s ease;
+}
+
+.hero-btn-primary:hover {
+  background: #075dc6;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(9, 105, 220, 0.25);
+}
+
+.hero-btn-primary:hover span {
+  transform: translateX(4px);
+}
+
+
+/* ========================================
+   SECONDARY BUTTON
+======================================== */
+
+.hero-btn-secondary {
+  color: #173f69;
+
+  background: #ffffff;
+
+  border: 1px solid #c8d5e3;
+}
+
+.hero-btn-secondary:hover {
+  color: #0969dc;
+
+  background: #f6f9fd;
+
+  border-color: #0969dc;
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   RIGHT IMAGE
+======================================== */
+
+.hero-visual {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 47%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   IMAGE WRAPPER
+======================================== */
+
+.hero-image-wrapper {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.hero-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition: transform 0.8s ease;
+}
+
+
+/* Very subtle image movement */
+
+.hero:hover .hero-image {
+  transform: scale(1.015);
+}
+
+
+/* ========================================
+   IMAGE EDGE FADE
+======================================== */
+
+.hero-image-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 1;
+
+  top: 0;
+  left: 0;
+
+  width: 28%;
+  height: 100%;
+
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.75) 18%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1100px) {
+
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero-container {
+    min-height: 500px;
+  }
+
+  .hero-content {
+    width: 58%;
+
+    padding-left: 35px;
+    padding-right: 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 46px;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-content p {
+    max-width: 500px;
+
+    font-size: 14.5px;
+
+    line-height: 1.7;
+  }
+
+  .hero-visual {
+    width: 45%;
+  }
+
+  .hero-image-wrapper::before {
+    width: 35%;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-container {
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 48px;
+  }
+
+
+  /* ====================================
+     CONTENT
+  ==================================== */
+
+  .hero-content {
+    width: 100%;
+
+    padding:
+      0 25px 38px;
+
+    margin-top: 0;
+  }
+
+
+  /* ====================================
+     EYEBROW
+  ==================================== */
+
+  .hero-eyebrow {
+    gap: 9px;
+
+    margin-bottom: 15px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .hero-eyebrow i {
+    width: 20px;
+  }
+
+
+  /* ====================================
+     HEADING
+  ==================================== */
+
+  .hero-content h1 {
+    font-size: clamp(36px, 9vw, 48px);
+
+    line-height: 1.06;
+
+    letter-spacing: -1.8px;
+  }
+
+  .hero-content h1 span {
+    margin-top: 3px;
+  }
+
+
+  /* ====================================
+     DESCRIPTION
+  ==================================== */
+
+  .hero-content p {
+    max-width: 100%;
+
+    margin-top: 18px;
+    margin-bottom: 24px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  /* ====================================
+     BUTTONS
+  ==================================== */
+
+  .hero-buttons {
+    flex-wrap: wrap;
+
+    gap: 10px;
+  }
+
+  .hero-btn {
+    min-height: 46px;
+
+    padding: 0 19px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+  }
+
+  .hero-btn-primary span {
+    font-size: 18px;
+  }
+
+
+  /* ====================================
+     IMAGE
+  ==================================== */
+
+  .hero-visual {
+    position: relative;
+
+    width: 100%;
+    height: 280px;
+
+    top: auto;
+    right: auto;
+  }
+
+  .hero-image-wrapper {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+  }
+
+
+  /* Remove side fade on mobile */
+
+  .hero-image-wrapper::before {
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 25%;
+
+    background: linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
+
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 480px) {
+
+  .hero-container {
+    padding-top: 40px;
+  }
+
+  .hero-content {
+    padding:
+      0 20px 32px;
+  }
+
+
+  /* Heading */
+
+  .hero-content h1 {
+    font-size: 34px;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  /* Description */
+
+  .hero-content p {
+    font-size: 13.5px;
+
+    line-height: 1.65;
+  }
+
+
+  /* Buttons */
+
+  .hero-buttons {
+    width: 100%;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    flex: 1;
+
+    padding: 0 13px;
+
+    min-width: 0;
+  }
+
+
+  /* Image */
+
+  .hero-visual {
+    height: 235px;
+  }
+}
+
+
+/* ========================================
+    SERVICES
+======================================== */
+
+
+.services {
+  padding: 82px 0;
+  background: #ffffff;
+}
+
+.services-container {
+  width: 90%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.services-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 50px;
+
+  margin-bottom: 42px;
+}
+
+.services-heading {
+  max-width: 720px;
+}
+
+.services-label {
+  display: block;
+  margin-bottom: 12px;
+
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #0969dc;
+}
+
+.services-header h2 {
+  margin: 0 0 14px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(32px, 3.2vw, 44px);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -1.3px;
+
+  color: #071b42;
+}
+
+.services-header p {
+  max-width: 650px;
+  margin: 0;
+
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+
+  color: #64748b;
+}
+
+
+/* =========================
+   EXPLORE SERVICES CTA
+========================= */
+
+.services-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  margin: 0 0 5px;
+}
+
+.services-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding-bottom: 7px;
+
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #0969dc;
+  text-decoration: none;
+
+  border-bottom: 1px solid #bcd7f5;
+
+  transition:
+    gap 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.services-link a:hover {
+  gap: 13px;
+  border-color: #0969dc;
+  color: #071b42;
+}
+
+
+/* =========================
+   SERVICES GRID
+========================= */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+
+/* =========================
+   SERVICE CARD
+========================= */
+
+.service-card {
+  position: relative;
+
+  min-height: 175px;
+  padding: 24px 22px;
+
+  background: #ffffff;
+  border: 1px solid #e5ebf2;
+  border-radius: 8px;
+
+  box-shadow: 0 4px 14px rgba(15, 42, 78, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+
+  overflow: hidden;
+}
+
+
+/* KEEP THE ORIGINAL ANIMATION */
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: #cbdff5;
+  box-shadow: 0 12px 28px rgba(15, 42, 78, 0.08);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.service-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 17px;
+
+  border-radius: 50%;
+
+  color: #0969dc;
+  background: #edf5ff;
+
+  font-size: 20px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  color: #ffffff;
+  background: #0969dc;
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   CARD TYPOGRAPHY
+========================= */
+
+.service-card h3 {
+  margin: 0 0 8px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+
+  color: #092d62;
+}
+
+.service-card p {
+  margin: 0;
+
+  max-width: 90%;
+
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  font-weight: 400;
+
+  color: #66788e;
+}
+
+
+/* =========================
+   CARD ARROW
+========================= */
+
+.service-arrow {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+
+  width: 29px;
+  height: 29px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #0969dc;
+  background: #edf5ff;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.service-card:hover .service-arrow {
+  color: #ffffff;
+  background: #0969dc;
+  transform: translateX(3px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+  .services {
+    padding: 70px 0;
+  }
+
+  .services-header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .services-link {
+    justify-content: flex-start;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 640px) {
+  .services {
+    padding: 60px 0;
+  }
+
+  .services-container {
+    width: 88%;
+  }
+
+  .services-header {
+    margin-bottom: 32px;
+    gap: 18px;
+  }
+
+  .services-header h2 {
+    font-size: 30px;
+    letter-spacing: -0.9px;
+  }
+
+  .services-header p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .services-link {
+    margin-top: 3px;
+  }
+
+  .services-link a {
+    font-size: 14px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-card {
+    min-height: 165px;
+    padding: 22px 20px;
+  }
+
+  .service-card h3 {
+    font-size: 17px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+  .services-header h2 {
+    font-size: 27px;
+  }
+
+  .service-card {
+    padding: 20px 18px;
+  }
+}
+
+/* INDUSTRIES */
+
+/* ========================================
+   INDUSTRIES — PCS GPL
+   Simple, clean and lightweight
+======================================== */
+
+.industries {
+  padding: 72px 0;
+  background: #071b40;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.industries,
+.industries * {
+  box-sizing: border-box;
+}
+
+.industries-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 36px;
+}
+
+
+/* ========================================
+   INDUSTRIES INTRO — REFINED
+======================================== */
+
+.industries-heading {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: end;
+  gap: 56px;
+  margin-bottom: 34px;
+}
+
+.industries-intro {
+  display: block;
+}
+
+.industries-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: #83bfff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.industries-label-line {
+  width: 25px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #398ff5;
+}
+
+.industries-intro h2 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(32px, 3.4vw, 44px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -1.3px;
+}
+
+.industries-intro h2 span {
+  color: #65b2ff;
+}
+
+.industries-intro > p {
+  max-width: 400px;
+  margin: 0 0 5px;
+  padding-left: 20px;
+  border-left: 2px solid rgba(101, 178, 255, 0.55);
+  color: #c0cfe0;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+
+
+
+/* Grid */
+
+.industries-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* Cards */
+
+.industry-card {
+  position: relative;
+  min-width: 0;
+  height: 240px;
+  overflow: hidden;
+  background: #102d52;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.industry-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.industry-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(3, 17, 38, 0.92) 0%,
+    rgba(3, 17, 38, 0.35) 45%,
+    rgba(3, 17, 38, 0.05) 100%
+  );
+}
+
+.industry-number {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  color: #fff;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.industry-card-content {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+}
+
+.industry-card-content h3 {
+  margin: 0;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.industry-card-content p {
+  margin: 7px 0 0;
+  color: #d3dfed;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Simple hover — no movement or image animation */
+
+.industry-card {
+  transition: border-color 180ms ease;
+}
+
+.industry-card:hover {
+  border-color: rgba(101, 178, 255, 0.65);
+}
+
+.industry-arrow {
+  display: none;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .industries {
+    padding: 60px 0;
+  }
+
+  .industries-container {
+    padding: 0 28px;
+  }
+
+  .industries-heading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .industries-intro h2 {
+    font-size: 36px;
+  }
+
+  .industries-intro > p {
+    max-width: 560px;
+    margin-top: 2px;
+  }
+
+  .industry-card {
+    height: 220px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .industries {
+    padding: 48px 0;
+  }
+
+  .industries-container {
+    padding: 0 18px;
+  }
+
+  .industries-heading {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .industries-label {
+    margin-bottom: 14px;
+    font-size: 10px;
+  }
+
+  .industries-intro h2 {
+    font-size: 30px;
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+  }
+
+  .industries-intro > p {
+    margin-top: 14px;
+    padding-left: 13px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  
+  .industries-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .industry-card {
+    height: 190px;
+  }
+
+  .industry-card-content {
+    right: 10px;
+    bottom: 12px;
+    left: 10px;
+  }
+
+  .industry-card-content h3 {
+    font-size: 13px;
+  }
+
+  .industry-card-content p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .industry-number {
+    top: 10px;
+    left: 10px;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 360px) {
+  .industries-gallery {
+    gap: 8px;
+  }
+
+  .industry-card {
+    height: 175px;
+  }
+
+  .industry-card-content h3 {
+    font-size: 12px;
+  }
+
+  .industry-card-content p {
+    font-size: 10px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .industry-card {
+    transition: none;
+  }
+}
+/*ABOUT*/
+/* ========================================
+   ABOUT PCS GPL
+======================================== */
+
+.about {
+  width: 100%;
+  padding: 75px 0;
+  background: #ffffff;
+  font-family: "IBM Plex Sans", sans-serif;
+  overflow: hidden;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 45px;
+
+  display: grid;
+  grid-template-columns: 46% 54%;
+  align-items: center;
+  gap: 55px;
+}
+
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.about-image {
+  position: relative;
+  height: 390px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #082b58;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+  object-position: center 42%;
+
+  transition: transform 0.6s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.035);
+}
+
+
+/* ========================================
+   IMAGE OVERLAY
+======================================== */
+
+.about-image-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 34, 72, 0.48) 0%,
+      rgba(4, 34, 72, 0.08) 55%,
+      rgba(4, 34, 72, 0.02) 100%
+    );
+}
+
+
+/* ========================================
+   IMAGE BADGE
+======================================== */
+
+.about-image-badge {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 14px 18px;
+
+  background: rgba(5, 35, 72, 0.88);
+  border-left: 3px solid #1684ed;
+
+  backdrop-filter: blur(8px);
+}
+
+.about-image-badge span {
+  color: #ffffff;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.about-image-badge small {
+  margin-top: 3px;
+
+  color: #a9c8e9;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+
+/* ========================================
+   BLUE CORNER
+======================================== */
+
+.about-image-corner {
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  width: 90px;
+  height: 90px;
+
+  background: #0878e5;
+
+  clip-path: polygon(
+    100% 0,
+    100% 100%,
+    0 0
+  );
+
+  opacity: 0.9;
+}
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.about-content {
+  max-width: 650px;
+}
+
+.about-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 11px;
+
+  color: #4b91d8;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.about-label span {
+  width: 30px;
+  height: 1px;
+
+  background: #4b91d8;
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.about-content h2 {
+  margin: 0;
+
+  color: #092f5f;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 38px;
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -1.4px;
+}
+
+.about-content h2 span {
+  display: block;
+  color: #0878e5;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.about-description {
+  max-width: 600px;
+
+  margin: 15px 0 0;
+
+  color: #6d829c;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 14px;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+
+/* ========================================
+   STATS
+======================================== */
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-top: 27px;
+
+  border-top: 1px solid #e1e9f2;
+  border-bottom: 1px solid #e1e9f2;
+
+  padding: 18px 0;
+}
+
+.about-stat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 17px;
+
+  border-left: 1px solid #e1e9f2;
+}
+
+.about-stat:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+.stat-icon {
+  width: 31px;
+  height: 31px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eaf4ff;
+  color: #0878e5;
+
+  border-radius: 6px;
+
+  font-size: 17px;
+}
+
+.about-stat strong {
+  display: block;
+
+  color: #245486;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.about-stat span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #8b9db0;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 10px;
+  font-weight: 400;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.about-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 25px;
+
+  padding: 11px 20px;
+
+  background: #0878e5;
+  color: #ffffff;
+
+  border-radius: 4px;
+
+  text-decoration: none;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  box-shadow: 0 7px 18px rgba(8, 120, 229, 0.18);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.about-button svg {
+  font-size: 15px;
+
+  transition: transform 0.25s ease;
+}
+
+.about-button:hover {
+  background: #0565c5;
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 22px rgba(8, 120, 229, 0.25);
+}
+
+.about-button:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .about-image {
+    height: 360px;
+  }
+
+  .about-content {
+    max-width: 750px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+  .about {
+    padding: 55px 0;
+  }
+
+  .about-container {
+    padding: 0 20px;
+    gap: 30px;
+  }
+
+  .about-image {
+    height: 300px;
+  }
+
+  .about-image-badge {
+    left: 18px;
+    bottom: 18px;
+  }
+
+  .about-content h2 {
+    font-size: 30px;
+  }
+
+  .about-description {
+    font-size: 13px;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    padding: 17px 0;
+  }
+
+  .about-stat,
+  .about-stat:first-child {
+    padding: 12px 0 0;
+
+    border-left: none;
+    border-top: 1px solid #e1e9f2;
+  }
+
+  .about-stat:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .about-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/*WHY CHOOSE US*/
+/* ========================================
+   WHY CHOOSE PCS GPL
+======================================== */
+
+.why-choose {
+  width: 100%;
+
+  padding: 65px 0;
+
+  background: #dceaf8;
+
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.why-choose-container {
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 0 45px;
+
+  display: grid;
+
+  grid-template-columns: 32% 68%;
+
+  align-items: center;
+
+  gap: 45px;
+}
+
+
+/* ========================================
+   LEFT CONTENT
+======================================== */
+
+.why-choose-content {
+  max-width: 360px;
+}
+
+.why-choose-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 10px;
+
+  color: #4b91d8;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.why-choose-label span {
+  width: 28px;
+
+  height: 1px;
+
+  background: #4b91d8;
+}
+
+.why-choose-content h2 {
+  margin: 0;
+
+  color: #0a315f;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 36px;
+
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  letter-spacing: -1.2px;
+}
+
+.why-choose-content h2 span {
+  display: block;
+
+  color: #0878e5;
+}
+
+.why-choose-content p {
+  margin: 15px 0 22px;
+
+  color: #7088a2;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.why-choose-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 10px 19px;
+
+  background: #0878e5;
+
+  color: #ffffff;
+
+  border-radius: 4px;
+
+  text-decoration: none;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  box-shadow: 0 6px 15px rgba(8, 120, 229, 0.18);
+
+  transition: all 0.25s ease;
+}
+
+.why-choose-button span {
+  font-size: 15px;
+
+  transition: transform 0.25s ease;
+}
+
+.why-choose-button:hover {
+  background: #0565c5;
+
+  transform: translateY(-2px);
+}
+
+.why-choose-button:hover span {
+  transform: translateX(4px);
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+.why-choose-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+.why-card {
+  min-height: 150px;
+
+  padding: 24px 19px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3edf7;
+
+  border-radius: 3px;
+
+  box-shadow: 0 3px 12px rgba(23, 71, 117, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #b8d8f6;
+
+  box-shadow: 0 12px 28px rgba(23, 71, 117, 0.1);
+}
+
+
+/* ========================================
+   ICON
+======================================== */
+
+.why-card-icon {
+  width: 38px;
+
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 17px;
+
+  border-radius: 50%;
+
+  background: #eaf4ff;
+
+  color: #0878e5;
+
+  font-size: 19px;
+}
+
+.why-card h3 {
+  margin: 0;
+
+  color: #153f70;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  line-height: 1.35;
+
+  letter-spacing: -0.2px;
+}
+
+.why-card p {
+  margin: 8px 0 0;
+
+  color: #879bb0;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1100px) {
+
+  .why-choose-container {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .why-choose-content {
+    max-width: 650px;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .why-choose {
+    padding: 55px 0;
+  }
+
+  .why-choose-container {
+    padding: 0 20px;
+  }
+
+  .why-choose-content h2 {
+    font-size: 30px;
+  }
+
+  .why-choose-content p {
+    font-size: 13px;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-card {
+    min-height: auto;
+  }
+
+  .why-card h3 {
+    font-size: 15px;
+  }
+
+  .why-card p {
+    font-size: 12px;
+  }
+
+}
+
+/*CONTACT / LET'S CONNECT*/
+
+.contact {
+  width: 100%;
+  padding: 85px 35px 75px;
+
+  background: #f7faff;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  box-sizing: border-box;
+}
+
+
+.contact-inner {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.contact-header {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+.contact-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-bottom: 13px;
+
+  color: #4b91d8;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+.contact-label span {
+  width: 30px;
+  height: 1px;
+
+  background: #4b91d8;
+}
+
+
+.contact-header h2 {
+  margin: 0;
+
+  color: #123d70;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 42px;
+  line-height: 1.12;
+
+  font-weight: 800;
+
+  letter-spacing: -1.4px;
+}
+
+
+.contact-header h2 span {
+  display: block;
+
+  color: #0878e5;
+}
+
+
+.contact-header p {
+  max-width: 650px;
+
+  margin: 17px auto 0;
+
+  color: #71869b;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   CONTACT CARDS
+======================================== */
+
+.contact-cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 15px;
+
+  margin-top: 45px;
+}
+
+
+.contact-card {
+  position: relative;
+
+  min-height: 92px;
+
+  padding: 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dfe9f3;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.contact-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #b9d8f2;
+
+  box-shadow:
+    0 12px 28px rgba(25, 77, 125, 0.08);
+}
+
+
+/* ========================================
+   CARD ICON
+======================================== */
+
+.contact-card-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(8, 120, 229, 0.2);
+  border-radius: 5px;
+
+  background: #f1f7fd;
+
+  color: #0878e5;
+
+  font-size: 16px;
+}
+
+
+/* ========================================
+   CARD CONTENT
+======================================== */
+
+.contact-card-content {
+  min-width: 0;
+}
+
+
+.contact-card-content span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #8296aa;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+.contact-card-content strong {
+  display: block;
+
+  color: #24486c;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  word-break: break-word;
+}
+
+
+/* ========================================
+   CARD ARROW
+======================================== */
+
+.contact-card-arrow {
+  margin-left: auto;
+
+  flex-shrink: 0;
+
+  color: #0878e5;
+
+  font-size: 14px;
+
+  transition: transform 0.25s ease;
+}
+
+
+.contact-card:hover .contact-card-arrow {
+  transform: translateX(4px);
+}
+
+
+/* ========================================
+   STATIC LOCATION CARD
+======================================== */
+
+.contact-card-static {
+  cursor: default;
+}
+
+
+.contact-card-static:hover {
+  transform: none;
+
+  border-color: #dfe9f3;
+
+  box-shadow: none;
+}
+
+
+/* ========================================
+   CTA
+======================================== */
+
+.contact-cta {
+  position: relative;
+
+  overflow: hidden;
+
+  margin-top: 18px;
+
+  padding: 24px 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  border-radius: 6px;
+
+  background:
+    linear-gradient(
+      105deg,
+      #062d5c 0%,
+      #07447e 55%,
+      #0878e5 100%
+    );
+
+  box-shadow:
+    0 12px 28px rgba(8, 74, 135, 0.14);
+}
+
+
+.contact-cta::after {
+  content: "";
+
+  position: absolute;
+
+  right: -80px;
+  top: -100px;
+
+  width: 260px;
+  height: 260px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 50%;
+}
+
+
+.contact-cta-content {
+  position: relative;
+
+  z-index: 1;
+}
+
+
+.contact-cta-content > span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #83c3fa;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+
+.contact-cta-content h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* ========================================
+   CTA BUTTON
+======================================== */
+
+.contact-cta-button {
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  flex-shrink: 0;
+
+  padding: 11px 17px;
+
+  border-radius: 4px;
+
+  background: #ffffff;
+
+  color: #075ba9;
+
+  font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.contact-cta-button svg {
+  font-size: 14px;
+
+  transition: transform 0.25s ease;
+}
+
+
+.contact-cta-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+.contact-cta-button:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .contact {
+    padding: 70px 25px 60px;
+  }
+
+
+  .contact-header h2 {
+    font-size: 36px;
+  }
+
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+
+    max-width: 650px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .contact-card {
+    min-height: 78px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .contact {
+    padding: 60px 18px 50px;
+  }
+
+
+  .contact-header {
+    text-align: left;
+  }
+
+
+  .contact-label {
+    justify-content: flex-start;
+  }
+
+
+  .contact-header h2 {
+    font-size: 30px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .contact-header p {
+    margin-top: 14px;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+
+  .contact-cards {
+    margin-top: 32px;
+
+    gap: 10px;
+  }
+
+
+  .contact-card {
+    padding: 15px;
+  }
+
+
+  .contact-card-content strong {
+    font-size: 11px;
+  }
+
+
+  .contact-cta {
+    margin-top: 12px;
+
+    padding: 20px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .contact-cta-content h3 {
+    font-size: 18px;
+  }
+
+
+  .contact-cta-button {
+    width: 100%;
+  }
+
+}
+
