@@ -1,3 +1,4 @@
+//import { useState } from "react";
 import {
   FiCode,
   FiUsers,
@@ -16,6 +17,7 @@ import {
 import { CiLocationOn } from "react-icons/ci";
 import { FaSalesforce } from "react-icons/fa";
 import "./Home.css"
+
 function Home() {
   const services = [
     {
@@ -113,6 +115,34 @@ const reasons = [
         "Your growth is our goal.",
     },
   ];
+  /*const [enquiry, setEnquiry] = useState({
+  fullName: "",
+  email: "",
+  phone: "",
+  company: "",
+  service: "",
+  message: "",
+});
+
+const [formMessage, setFormMessage] = useState("");
+
+const handleEnquiryChange = (e) => {
+  const { name, value } = e.target;
+
+  setEnquiry((prev) => ({
+    ...prev,
+    [name]: value,
+  }));
+};
+
+const handleEnquirySubmit = (e) => {
+  e.preventDefault();
+
+  // Temporary: backend and MongoDB connection will be added next.
+  console.log("Enquiry details:", enquiry);
+
+  setFormMessage("Your enquiry form is ready for backend integration.");
+};*/
   return (
     <main>
       <section className="hero">
@@ -553,6 +583,146 @@ const reasons = [
 
         </div>
 
+        {/* ASK US FORM 
+        <div className="ask-us-wrapper">
+
+          <div className="ask-us-content">
+            <span className="ask-us-label">LET'S CONNECT</span>
+
+            <h3>
+              Have a project in mind?
+              <span> Let's talk.</span>
+            </h3>
+
+            <p>
+              Tell us about your requirements. Our team will get in touch
+              with you to discuss how we can help your business.
+            </p>
+
+            <div className="ask-us-note">
+              <span className="ask-us-note-icon">✦</span>
+              <div>
+                <strong>Let's build something meaningful.</strong>
+                <small>
+                  Share your ideas and explore the right technology solutions
+                  for your business.
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <form className="ask-us-form" onSubmit={handleEnquirySubmit}>
+
+            <div className="ask-us-form-header">
+              <h4>Ask Us</h4>
+              <p>Fill in the details below to get started.</p>
+            </div>
+
+            <div className="ask-us-fields">
+
+              <div className="ask-us-field">
+                <label htmlFor="fullName">Full Name <span>*</span></label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="Enter your full name"
+                  value={enquiry.fullName}
+                  onChange={handleEnquiryChange}
+                  required
+                />
+              </div>
+
+              <div className="ask-us-field">
+                <label htmlFor="email">Business Email <span>*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="name@company.com"
+                  value={enquiry.email}
+                  onChange={handleEnquiryChange}
+                  required
+                />
+              </div>
+
+              <div className="ask-us-field">
+                <label htmlFor="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+91  XXXXX XXXXX"
+                  value={enquiry.phone}
+                  onChange={handleEnquiryChange}
+                />
+              </div>
+
+              <div className="ask-us-field">
+                <label htmlFor="company">Company Name</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Your company name"
+                  value={enquiry.company}
+                  onChange={handleEnquiryChange}
+                />
+              </div>
+
+              <div className="ask-us-field ask-us-full">
+                <label htmlFor="service">What service are you interested in? <span>*</span></label>
+
+                <select
+                  id="service"
+                  name="service"
+                  value={enquiry.service}
+                  onChange={handleEnquiryChange}
+                  required
+                >
+                  <option value="">Select a service</option>
+                  <option value="Software Development">Software Development</option>
+                  <option value="Salesforce">Salesforce Solutions</option>
+                  <option value="IT Consulting">IT Consulting</option>
+                  <option value="Talent Outsourcing">Talent Outsourcing</option>
+                  <option value="Corporate & University Training">
+                    Corporate & University Training
+                  </option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div className="ask-us-field ask-us-full">
+                <label htmlFor="message">Tell us about your requirements <span>*</span></label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Describe your project or requirements..."
+                  rows="4"
+                  value={enquiry.message}
+                  onChange={handleEnquiryChange}
+                  required
+                />
+              </div>
+
+            </div>
+
+            {formMessage && (
+              <p className="ask-us-message">{formMessage}</p>
+            )}
+
+            <button type="submit" className="ask-us-submit">
+              Submit Enquiry
+              <span>→</span>
+            </button>
+
+            <p className="ask-us-privacy">
+              Your information will only be used to respond to your enquiry.
+            </p>
+
+          </form>
+        </div>*/}
       </section>
       
     </main>

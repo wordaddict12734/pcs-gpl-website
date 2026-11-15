@@ -5,6 +5,7 @@ import Salesforce from "./pages/services/Salesforce";
 import SoftwareDevelopment from "./pages/services/SoftwareDevelopment";
 import Itconsulting from "./pages/services/Itconsulting";
 import Location from "./pages/Location";
+import About from "./pages/About";
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ function App() {
           <Route path="/services/software-development" element={<SoftwareDevelopment />} />
           <Route path="/services/consulting" element={<Itconsulting />} />
           <Route path="/Location" element={<Location />} />
+          <Route path="/about" element={<About />} />
         </Route>
       </Routes>
     </BrowserRouter>

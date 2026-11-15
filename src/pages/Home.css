@@ -2489,4 +2489,268 @@
   }
 
 }
+/* =================================
+   ASK US ENQUIRY FORM
+================================= */
+
+.ask-us-wrapper {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 65px;
+  align-items: center;
+  margin: 75px 0;
+  padding: 55px;
+  background: #f4f8ff;
+  border: 1px solid #e4edfa;
+  border-radius: 18px;
+}
+
+/* LEFT CONTENT */
+
+.ask-us-content {
+  max-width: 440px;
+}
+
+.ask-us-label {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #0b63f6;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.ask-us-content h3 {
+  margin: 0 0 20px;
+  color: #071b49;
+  font-size: clamp(30px, 3.5vw, 43px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+.ask-us-content h3 span {
+  color: #0b63f6;
+}
+
+.ask-us-content > p {
+  color: #68758b;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.ask-us-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid #dce6f4;
+}
+
+.ask-us-note-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 35px;
+  height: 35px;
+  color: #0b63f6;
+  background: #e4efff;
+  border-radius: 10px;
+  font-size: 17px;
+}
+
+.ask-us-note div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ask-us-note strong {
+  color: #14213d;
+  font-size: 13px;
+}
+
+.ask-us-note small {
+  color: #78859a;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* FORM */
+
+.ask-us-form {
+  padding: 35px;
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(7, 27, 73, 0.05);
+}
+
+.ask-us-form-header {
+  margin-bottom: 27px;
+}
+
+.ask-us-form-header h4 {
+  margin: 0 0 8px;
+  color: #071b49;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.ask-us-form-header p {
+  margin: 0;
+  color: #8993a5;
+  font-size: 13px;
+}
+
+/* FORM GRID */
+
+.ask-us-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.ask-us-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.ask-us-full {
+  grid-column: 1 / -1;
+}
+
+.ask-us-field label {
+  color: #263651;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ask-us-field label span {
+  color: #e05252;
+}
+
+.ask-us-field input,
+.ask-us-field select,
+.ask-us-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  color: #14213d;
+  background: #fafbfd;
+  border: 1px solid #e1e7f0;
+  border-radius: 7px;
+  outline: none;
+  font-family: inherit;
+  font-size: 13px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ask-us-field input,
+.ask-us-field select {
+  height: 46px;
+}
+
+.ask-us-field textarea {
+  min-height: 115px;
+  resize: vertical;
+}
+
+.ask-us-field input::placeholder,
+.ask-us-field textarea::placeholder {
+  color: #a3adbd;
+}
+
+.ask-us-field input:focus,
+.ask-us-field select:focus,
+.ask-us-field textarea:focus {
+  border-color: #0b63f6;
+  box-shadow: 0 0 0 3px rgba(11, 99, 246, 0.08);
+}
+
+/* SUBMIT BUTTON */
+
+.ask-us-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 24px;
+  padding: 15px 20px;
+  color: #ffffff;
+  background: #0b63f6;
+  border: none;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.ask-us-submit:hover {
+  background: #071b49;
+  transform: translateY(-2px);
+}
+
+.ask-us-submit span {
+  font-size: 18px;
+}
+
+.ask-us-message {
+  margin: 15px 0 0;
+  color: #0b63f6;
+  font-size: 12px;
+}
+
+.ask-us-privacy {
+  margin: 14px 0 0;
+  color: #98a1af;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .ask-us-wrapper {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 35px;
+  }
+
+  .ask-us-content {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 550px) {
+  .ask-us-wrapper {
+    margin: 45px 0;
+    padding: 22px 16px;
+    gap: 28px;
+  }
+
+  .ask-us-fields {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .ask-us-full {
+    grid-column: auto;
+  }
+
+  .ask-us-form {
+    padding: 22px 16px;
+  }
+
+  .ask-us-content h3 {
+    font-size: 30px;
+  }
+}
 
