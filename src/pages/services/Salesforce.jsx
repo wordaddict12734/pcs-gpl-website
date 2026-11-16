@@ -352,7 +352,7 @@ const reasons = [
               <div className="salesforce-why-us-accent"></div>
 
               <img
-                src="/images/salesforce/salesforce-team.jpg"
+                src="/images/salesforce-team.jpg"
                 alt="PCS Global Salesforce team collaboration"
                 className="salesforce-why-us-image"
               />

@@ -209,7 +209,7 @@ function SoftwareDevelopment() {
           <div className="software-image-wrapper">
 
             <img
-              src="/images/software-development/software-hero.jpg"
+              src="/images/software-hero.jpg"
               alt="Software development"
               className="software-image"
             />
@@ -294,7 +294,7 @@ function SoftwareDevelopment() {
 
             <div className="software-why-image-wrapper">
               <img
-                src="/images/software-development/software-Why.jpg"
+                src="/images/software-Why.jpg"
                 alt="Software developer working on a laptop"
                 className="software-why-image"
               />
@@ -543,7 +543,7 @@ function SoftwareDevelopment() {
             <div className="software-impact-image-wrapper">
 
               <img
-                src="/images/software-development/software-team.jpg"
+                src="/images/software-team.jpg"
                 alt="Software development team collaborating"
               />
 

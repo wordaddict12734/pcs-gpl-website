@@ -17,7 +17,7 @@ function Navbar() {
 
         {/* Logo */}
         <a href="/" className="navbar-logo">
-          <img src="/images/logo/logo.png" alt="PCS" className="logo-icon" />
+          <img src="/images/logo.png" alt="PCS" className="logo-icon" />
 
           <span className="logo-divider"></span>
 

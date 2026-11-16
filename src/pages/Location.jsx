@@ -107,7 +107,7 @@ function Location() {
         {/* Background image */}
         <div className="location-hero-image">
           <img
-            src="/images/location/location-hero.png"
+            src="/images/location-hero.png"
             alt="Modern corporate buildings"
           />
         </div>

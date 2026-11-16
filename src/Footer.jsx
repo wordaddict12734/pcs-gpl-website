@@ -40,7 +40,7 @@ const Footer = () => {
           <div className="footer-company">
             <a href="/" className="footer-logo">
               <img
-                src="/images/logo/logo.png"
+                src="/images/logo.png"
                 alt="PCS GPL logo"
                 className="footer-logo-image"
                 loading="lazy"
