@@ -39,7 +39,7 @@ function Navbar() {
             Home
           </a>
 
-          <a href="#about" className="nav-link">
+          <a href="/about" className="nav-link">
             About Us
           </a>
 
@@ -89,7 +89,7 @@ function Navbar() {
         </nav>
 
         {/* Desktop Quote Button */}
-        <a href="#contact" className="quote-btn">
+        <a href="/#contact" className="quote-btn">
           <span>Contact Us</span>
           <FiArrowRight />
         </a>
